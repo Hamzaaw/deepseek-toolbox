@@ -7,7 +7,7 @@
 ![DeepSeek Toolbox prompt library with reusable templates in dark mode](docs/prompt-library.png)
 <p align="center"><sub>Your best prompts, ready when you need them.</sub></p>
 
-**Free in v1.0.2.** All current features are available without a Toolbox subscription. The store currently offers v1.0.1; the v1.0.2 source here is not yet released to the store.
+**Free and open source.** The store currently offers v1.0.1; the v1.0.2 source here is not yet released to the store.
 
 ## What you can do
 
@@ -34,15 +34,13 @@ For the published version, use the **[Chrome Web Store](https://chromewebstore.g
 
 Keep the existing installation and its ID to preserve saved data. Loading a different folder creates a separate installation with separate storage. For an unpacked update, update the files in the existing folder, click **Reload**, then refresh DeepSeek. Store installations should update through the store.
 
-This release does not reset existing purchases or sessions.
-
 </details>
 
 ## Your data stays yours
 
 Folders, bookmarks, prompts, chains, and settings are stored in your browser. Enhancement sends the draft you choose to enhance to a hosted API and depends on that service being available. The other tools do not need the enhancement service.
 
-The extension also checks existing membership status; feedback opens your email app. Permissions remain `storage`, `activeTab`, and `contextMenus`, with host access only to `chat.deepseek.com`. [Read the privacy details →](PRIVACY.md)
+Permissions remain `storage`, `activeTab`, and `contextMenus`, with host access only to `chat.deepseek.com`. See the [privacy details](PRIVACY.md) for network requests and data handling.
 
 ## Make it better
 
@@ -74,11 +72,9 @@ Tests use a disposable profile and synthetic conversations. To use an installed 
 </details>
 
 <details>
-<summary><strong>Compatibility and future features</strong></summary>
+<summary><strong>Compatibility notes</strong></summary>
 
 DeepSeek can change its interface, which may break compatibility. Exports include messages currently loaded in the page; long conversations may have earlier messages unloaded. PDF export opens the browser’s print view.
-
-Current tools are free. New hosted or premium features may be added separately in the future.
 
 </details>
 
