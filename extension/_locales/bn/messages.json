@@ -1,0 +1,1054 @@
+{
+  "extensionName": {
+    "message": "DeepSeek — ফোল্ডার, প্রম্পট ও এক্সপোর্ট",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "ফোল্ডার, বুকমার্ক, প্রম্পট লাইব্রেরি, প্রম্পট চেইন ও চ্যাট এক্সপোর্ট দিয়ে DeepSeek আরও সহজে ব্যবহার করুন।",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-Toolbox",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "ফোল্ডার",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "প্রম্পট লাইব্রেরি",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "প্রম্পট চেইন",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "বুকমার্ক করা বার্তা",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "চ্যাট এক্সপোর্ট",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "চালু",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "শীঘ্রই",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "ব্যবহার করতে $LINK$ খুলুন",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  },
+  "toolboxLocale": {
+    "message": "bn",
+    "description": "Language of this catalog; used for dates and direction."
+  },
+  "toolboxDirection": {
+    "message": "ltr",
+    "description": "Direction of extension UI, never the host chat."
+  },
+  "ui__Use_variable_name_for_placeholders__41229494": {
+    "message": "(প্লেসহোল্ডারের জন্য {variable_name} ব্যবহার করুন)",
+    "description": "UI: (Use {variable_name} for placeholders)"
+  },
+  "ui__Use_variable_for_placeholders__ac4e6850": {
+    "message": "(প্লেসহোল্ডারের জন্য {{variable}} ব্যবহার করুন)",
+    "description": "UI: (Use {{variable}} for placeholders)"
+  },
+  "ui_0_bookmarks_b7a35316": {
+    "message": "০টি বুকমার্ক",
+    "description": "UI: 0 bookmarks"
+  },
+  "ui_0_selected_326ec79c": {
+    "message": "০টি নির্বাচিত",
+    "description": "UI: 0 selected"
+  },
+  "ui_2_10_steps_967fb9ae": {
+    "message": "১০টির মধ্যে ২টি ধাপ",
+    "description": "UI: 2 / 10 steps"
+  },
+  "ui_Add_New_Prompt_51bf07f4": {
+    "message": "নতুন প্রম্পট যোগ করুন",
+    "description": "UI: Add New Prompt"
+  },
+  "ui_Add_Step_a110f7ee": {
+    "message": "ধাপ যোগ করুন",
+    "description": "UI: Add Step"
+  },
+  "ui_Add_to_folder_e95abe5b": {
+    "message": "ফোল্ডারে যোগ করুন",
+    "description": "UI: Add to folder"
+  },
+  "ui_Alert_5d7eca99": {
+    "message": "বার্তা",
+    "description": "UI: Alert"
+  },
+  "ui_All_current_features_are_free_d0bd7980": {
+    "message": "বর্তমান সব সুবিধা বিনামূল্যে",
+    "description": "UI: All current features are free"
+  },
+  "ui_All_current_features_are_free_Existing_purchases_87675a63": {
+    "message": "বর্তমান সব সুবিধা বিনামূল্যে। আগের কেনাকাটার রেকর্ড সংরক্ষিত থাকবে।",
+    "description": "UI: All current features are free. Existing purchases remain on record."
+  },
+  "ui_Are_you_sure_you_want_to_delete_this_chain_This__a646031": {
+    "message": "আপনি কি এই প্রম্পট চেইনটি মুছতে চান? এটি আর ফেরানো যাবে না।",
+    "description": "UI: Are you sure you want to delete this chain? This action cannot be undone."
+  },
+  "ui_Are_you_sure_you_want_to_delete_this_prompt_This_ad36973c": {
+    "message": "আপনি কি এই প্রম্পটটি মুছতে চান? এটি আর ফেরানো যাবে না।",
+    "description": "UI: Are you sure you want to delete this prompt? This action cannot be undone."
+  },
+  "ui_Are_you_sure_you_want_to_remove_this_bookmark__d53202c6": {
+    "message": "আপনি কি এই বুকমার্কটি সরাতে চান?",
+    "description": "UI: Are you sure you want to remove this bookmark?"
+  },
+  "ui_Are_you_sure__68981be8": {
+    "message": "আপনি কি নিশ্চিত?",
+    "description": "UI: Are you sure?"
+  },
+  "ui_Bookmark_message_e7e39ee2": {
+    "message": "বার্তাটি বুকমার্ক করুন",
+    "description": "UI: Bookmark message"
+  },
+  "ui_Bookmark_removed_6a0bf239": {
+    "message": "বুকমার্ক সরানো হয়েছে",
+    "description": "UI: Bookmark removed"
+  },
+  "ui_Bookmarked_Messages_451dd7fc": {
+    "message": "বুকমার্ক করা বার্তা",
+    "description": "UI: Bookmarked Messages"
+  },
+  "ui_Brief_description_of_what_this_chain_does_7b746d2": {
+    "message": "এই চেইনের কাজের সংক্ষিপ্ত বিবরণ",
+    "description": "UI: Brief description of what this chain does"
+  },
+  "ui_Brief_description_of_what_this_prompt_does_82b81e6b": {
+    "message": "এই প্রম্পটের কাজের সংক্ষিপ্ত বিবরণ",
+    "description": "UI: Brief description of what this prompt does"
+  },
+  "ui_Bulk_Delete_92930d84": {
+    "message": "একসঙ্গে মুছুন",
+    "description": "UI: Bulk Delete"
+  },
+  "ui_CATEGORIES_bed194ed": {
+    "message": "বিভাগ",
+    "description": "UI: CATEGORIES"
+  },
+  "ui_CHATS_ffdef5a8": {
+    "message": "চ্যাট",
+    "description": "UI: CHATS"
+  },
+  "ui_Cancel_35afca3b": {
+    "message": "বাতিল",
+    "description": "UI: Cancel"
+  },
+  "ui_Chain_Steps_20ffbf49": {
+    "message": "চেইনের ধাপ",
+    "description": "UI: Chain Steps"
+  },
+  "ui_Chain_Title_6a8983c4": {
+    "message": "চেইনের শিরোনাম",
+    "description": "UI: Chain Title"
+  },
+  "ui_Chain_completed_successfully_f3ac8834": {
+    "message": "চেইন সফলভাবে সম্পন্ন হয়েছে",
+    "description": "UI: Chain completed successfully"
+  },
+  "ui_Chain_created_successfully__3fe0621a": {
+    "message": "চেইন সফলভাবে তৈরি হয়েছে!",
+    "description": "UI: Chain created successfully!"
+  },
+  "ui_Chain_deleted_9514dfb": {
+    "message": "চেইন মুছে ফেলা হয়েছে",
+    "description": "UI: Chain deleted"
+  },
+  "ui_Chain_must_have_at_least_2_non_empty_steps_7686dcab": {
+    "message": "চেইনে অন্তত ২টি পূরণ করা ধাপ থাকতে হবে",
+    "description": "UI: Chain must have at least 2 non-empty steps"
+  },
+  "ui_Chain_must_have_at_least_2_steps_4986128c": {
+    "message": "চেইনে অন্তত ২টি ধাপ থাকতে হবে",
+    "description": "UI: Chain must have at least 2 steps"
+  },
+  "ui_Chain_stopped_4869151f": {
+    "message": "চেইন থামানো হয়েছে",
+    "description": "UI: Chain stopped"
+  },
+  "ui_Chain_stopped_to_preserve_your_draft_1fcf55c4": {
+    "message": "আপনার খসড়া অক্ষত রাখতে চেইন থামানো হয়েছে",
+    "description": "UI: Chain stopped to preserve your draft"
+  },
+  "ui_Chain_timed_out_after_5_minutes_ac145805": {
+    "message": "৫ মিনিট পর চেইনের সময়সীমা শেষ হয়েছে",
+    "description": "UI: Chain timed out after 5 minutes"
+  },
+  "ui_Chain_updated_successfully__796502dd": {
+    "message": "চেইন সফলভাবে আপডেট হয়েছে!",
+    "description": "UI: Chain updated successfully!"
+  },
+  "ui_Chaining_b9943ada": {
+    "message": "প্রম্পট চেইন",
+    "description": "UI: Chaining"
+  },
+  "ui_Chat_Export_c761e6a7": {
+    "message": "চ্যাট এক্সপোর্ট",
+    "description": "UI: Chat Export"
+  },
+  "ui_Check_back_later_for_more_prompts_2d71cb0f": {
+    "message": "আরও প্রম্পটের জন্য পরে দেখুন",
+    "description": "UI: Check back later for more prompts"
+  },
+  "ui_Choose_a_format_to_export_54c99113": {
+    "message": "এক্সপোর্টের ফরম্যাট বেছে নিন",
+    "description": "UI: Choose a format to export"
+  },
+  "ui_Clear_All_de7f94e5": {
+    "message": "সব সরান",
+    "description": "UI: Clear All"
+  },
+  "ui_Clear_All_Bookmarks_d49d7820": {
+    "message": "সব বুকমার্ক সরান",
+    "description": "UI: Clear All Bookmarks"
+  },
+  "ui_Click_Add_New_Prompt_to_create_your_first_prompt_a825b6c0": {
+    "message": "প্রথম প্রম্পট তৈরি করতে ‘নতুন প্রম্পট যোগ করুন’-এ ক্লিক করুন",
+    "description": "UI: Click \"Add New Prompt\" to create your first prompt"
+  },
+  "ui_Click_New_to_create_one_bc254412": {
+    "message": "তৈরি করতে ‘নতুন’-এ ক্লিক করুন",
+    "description": "UI: Click \"New\" to create one"
+  },
+  "ui_Click_the_bookmark_icon_on_any_message_to_save_i_d11f307e": {
+    "message": "বার্তা সংরক্ষণ করতে সেটির বুকমার্ক আইকনে ক্লিক করুন",
+    "description": "UI: Click the bookmark icon on any message to save it"
+  },
+  "ui_Click_the_folder_icon_to_add_a_chat_to_a_folder_f107987e": {
+    "message": "চ্যাট ফোল্ডারে যোগ করতে ফোল্ডার আইকনে ক্লিক করুন",
+    "description": "UI: Click the folder icon to add a chat to a folder"
+  },
+  "ui_Close_cd86acc3": {
+    "message": "বন্ধ করুন",
+    "description": "UI: Close"
+  },
+  "ui_Close_Modal_f1176cca": {
+    "message": "উইন্ডো বন্ধ করুন",
+    "description": "UI: Close Modal"
+  },
+  "ui_Confirm_a183c9ef": {
+    "message": "নিশ্চিত করুন",
+    "description": "UI: Confirm"
+  },
+  "ui_Content_c1679f62": {
+    "message": "বিষয়বস্তু",
+    "description": "UI: Content"
+  },
+  "ui_Create_Chain_a580eedc": {
+    "message": "চেইন তৈরি করুন",
+    "description": "UI: Create Chain"
+  },
+  "ui_Create_Folder_14a179b3": {
+    "message": "ফোল্ডার তৈরি করুন",
+    "description": "UI: Create Folder"
+  },
+  "ui_Create_New_Chain_831e12f6": {
+    "message": "নতুন চেইন তৈরি করুন",
+    "description": "UI: Create New Chain"
+  },
+  "ui_Create_New_Prompt_ac744bdb": {
+    "message": "নতুন প্রম্পট তৈরি করুন",
+    "description": "UI: Create New Prompt"
+  },
+  "ui_Create_Prompt_Chain_a9b3e65c": {
+    "message": "প্রম্পট চেইন তৈরি করুন",
+    "description": "UI: Create Prompt Chain"
+  },
+  "ui_Create_a_folder_first_before_adding_chats_to_it__4f07e10d": {
+    "message": "চ্যাট যোগ করার আগে একটি ফোল্ডার তৈরি করুন।",
+    "description": "UI: Create a folder first before adding chats to it."
+  },
+  "ui_Create_your_first_prompt_chain_to_automate_multi_1cff355e": {
+    "message": "একাধিক ধাপের কথোপকথন স্বয়ংক্রিয় করতে প্রথম প্রম্পট চেইন তৈরি করুন",
+    "description": "UI: Create your first prompt chain to automate multi-step conversations"
+  },
+  "ui_Delete_5797ea6a": {
+    "message": "মুছুন",
+    "description": "UI: Delete"
+  },
+  "ui_Delete_0__8d435b2d": {
+    "message": "মুছুন (০)",
+    "description": "UI: Delete (0)"
+  },
+  "ui_Delete_All_1e2162d": {
+    "message": "সব মুছুন",
+    "description": "UI: Delete All"
+  },
+  "ui_Delete_Chain_9f99ff4b": {
+    "message": "চেইন মুছুন",
+    "description": "UI: Delete Chain"
+  },
+  "ui_Delete_Folder_1d01f10e": {
+    "message": "ফোল্ডার মুছুন",
+    "description": "UI: Delete Folder"
+  },
+  "ui_Delete_Prompt_9587f124": {
+    "message": "প্রম্পট মুছুন",
+    "description": "UI: Delete Prompt"
+  },
+  "ui_Delete_folder_63156b2e": {
+    "message": "ফোল্ডার মুছুন",
+    "description": "UI: Delete folder"
+  },
+  "ui_Deleting_conversations__2d2d8075": {
+    "message": "চ্যাট মোছা হচ্ছে…",
+    "description": "UI: Deleting conversations..."
+  },
+  "ui_Description_66de7a09": {
+    "message": "বিবরণ",
+    "description": "UI: Description"
+  },
+  "ui_Detected_Variables__3faebba4": {
+    "message": "শনাক্ত করা ভেরিয়েবল:",
+    "description": "UI: Detected Variables:"
+  },
+  "ui_Done_8dd31791": {
+    "message": "সম্পন্ন",
+    "description": "UI: Done"
+  },
+  "ui_Edit_Chain_62a37948": {
+    "message": "চেইন সম্পাদনা করুন",
+    "description": "UI: Edit Chain"
+  },
+  "ui_Edit_Prompt_dc6b3101": {
+    "message": "প্রম্পট সম্পাদনা করুন",
+    "description": "UI: Edit Prompt"
+  },
+  "ui_Enhance_495c1849": {
+    "message": "উন্নত করুন",
+    "description": "UI: Enhance"
+  },
+  "ui_Enhance_Prompt_ced565a9": {
+    "message": "প্রম্পট উন্নত করুন",
+    "description": "UI: Enhance Prompt"
+  },
+  "ui_Enhanced__f7a58d42": {
+    "message": "উন্নত করা হয়েছে!",
+    "description": "UI: Enhanced!"
+  },
+  "ui_Enhancement_failed_6bd6151e": {
+    "message": "প্রম্পট উন্নত করা যায়নি",
+    "description": "UI: Enhancement failed"
+  },
+  "ui_Enhancement_finished_your_changed_draft_was_pres_2d956c03": {
+    "message": "উন্নত করা শেষ হয়েছে; আপনার পরিবর্তিত খসড়া অক্ষত রাখা হয়েছে",
+    "description": "UI: Enhancement finished; your changed draft was preserved"
+  },
+  "ui_Enhancing__2f88a128": {
+    "message": "উন্নত করা হচ্ছে…",
+    "description": "UI: Enhancing..."
+  },
+  "ui_Enter_your_prompt_template_Example_Write_a_blog__b975f91d": {
+    "message": "আপনার প্রম্পট টেমপ্লেট লিখুন…\n\nউদাহরণ:\n{audience}-এর জন্য {topic} বিষয়ে একটি ব্লগ পোস্ট লেখো।\nলেখার ধরন: {tone}",
+    "description": "UI: Enter your prompt template...\n\nExample:\nWrite a blog post about {topic} for {audience}.\nTone: {tone}"
+  },
+  "ui_Existing_premium_membership_current_features_are_ee6fb0ed": {
+    "message": "আগের প্রিমিয়াম সদস্যপদ — বর্তমান সুবিধাগুলো সবার জন্য বিনামূল্যে",
+    "description": "UI: Existing premium membership — current features are free for everyone"
+  },
+  "ui_Export_Chat_847d0377": {
+    "message": "চ্যাট এক্সপোর্ট করুন",
+    "description": "UI: Export Chat"
+  },
+  "ui_Exporting__96187e59": {
+    "message": "এক্সপোর্ট হচ্ছে…",
+    "description": "UI: Exporting..."
+  },
+  "ui_FOLDERS_78bae08a": {
+    "message": "ফোল্ডার",
+    "description": "UI: FOLDERS"
+  },
+  "ui_Failed_5579c3d4": {
+    "message": "ব্যর্থ",
+    "description": "UI: Failed"
+  },
+  "ui_Failed_to_delete_chain_e1b5416d": {
+    "message": "চেইন মোছা যায়নি",
+    "description": "UI: Failed to delete chain"
+  },
+  "ui_Failed_to_delete_prompt_e20b51b2": {
+    "message": "প্রম্পট মোছা যায়নি",
+    "description": "UI: Failed to delete prompt"
+  },
+  "ui_Failed_to_execute_step_7aa26a74": {
+    "message": "ধাপটি চালানো যায়নি",
+    "description": "UI: Failed to execute step"
+  },
+  "ui_Failed_to_insert_text_Please_ensure_DeepSeek_is__792011fa": {
+    "message": "লেখা যোগ করা যায়নি। DeepSeek লোড হয়েছে কি না দেখুন।",
+    "description": "UI: Failed to insert text. Please ensure DeepSeek is loaded."
+  },
+  "ui_Failed_to_open_export_modal_4cb19726": {
+    "message": "এক্সপোর্ট উইন্ডো খোলা যায়নি",
+    "description": "UI: Failed to open export modal"
+  },
+  "ui_Failed_to_save_chain_4f6476bb": {
+    "message": "চেইন সংরক্ষণ করা যায়নি",
+    "description": "UI: Failed to save chain"
+  },
+  "ui_Failed_to_save_prompt_1ff86df4": {
+    "message": "প্রম্পট সংরক্ষণ করা যায়নি",
+    "description": "UI: Failed to save prompt"
+  },
+  "ui_Features_6c4737ea": {
+    "message": "সুবিধাসমূহ",
+    "description": "UI: Features"
+  },
+  "ui_Fill_Chain_Variables_8c34baa4": {
+    "message": "চেইনের ভেরিয়েবল পূরণ করুন",
+    "description": "UI: Fill Chain Variables"
+  },
+  "ui_Free_1c5c36fb": {
+    "message": "বিনামূল্যে",
+    "description": "UI: Free"
+  },
+  "ui_Help_improve_DeepSeek_Toolbox_Share_thoughts_rep_3de4eae2": {
+    "message": "DeepSeek Toolbox আরও ভালো করতে সাহায্য করুন! মতামত দিন, সমস্যা জানান বা নতুন সুবিধার প্রস্তাব দিন।",
+    "description": "UI: Help improve DeepSeek Toolbox! Share thoughts, report bugs, or suggest features."
+  },
+  "ui_Initializing__2e0471a2": {
+    "message": "প্রস্তুত হচ্ছে…",
+    "description": "UI: Initializing..."
+  },
+  "ui_Keyboard_Shortcuts_ba51bd57": {
+    "message": "কিবোর্ড শর্টকাট",
+    "description": "UI: Keyboard Shortcuts"
+  },
+  "ui_Library_a8532270": {
+    "message": "লাইব্রেরি",
+    "description": "UI: Library"
+  },
+  "ui_Manage_Folders_d47cd85b": {
+    "message": "ফোল্ডার পরিচালনা",
+    "description": "UI: Manage Folders"
+  },
+  "ui_Maximum_10_steps_allowed_119fe4b9": {
+    "message": "সর্বোচ্চ ১০টি ধাপ যোগ করা যাবে",
+    "description": "UI: Maximum 10 steps allowed"
+  },
+  "ui_Message_bookmarked__e414f92c": {
+    "message": "বার্তাটি বুকমার্ক করা হয়েছে!",
+    "description": "UI: Message bookmarked!"
+  },
+  "ui_New_8b242db1": {
+    "message": "নতুন",
+    "description": "UI: New"
+  },
+  "ui_New_Chat_313f8d3d": {
+    "message": "নতুন চ্যাট",
+    "description": "UI: New Chat"
+  },
+  "ui_No_Conversation_Open_202b4823": {
+    "message": "কোনো চ্যাট খোলা নেই",
+    "description": "UI: No Conversation Open"
+  },
+  "ui_No_Folders_dcfa4e77": {
+    "message": "কোনো ফোল্ডার নেই",
+    "description": "UI: No Folders"
+  },
+  "ui_No_bookmarks_match_your_search_b53247f": {
+    "message": "আপনার অনুসন্ধানের সঙ্গে মিলে এমন বুকমার্ক নেই",
+    "description": "UI: No bookmarks match your search"
+  },
+  "ui_No_bookmarks_yet_fa63047d": {
+    "message": "এখনও কোনো বুকমার্ক নেই",
+    "description": "UI: No bookmarks yet"
+  },
+  "ui_No_chains_yet_80ad032": {
+    "message": "এখনও কোনো চেইন নেই",
+    "description": "UI: No chains yet"
+  },
+  "ui_No_chats_found_7071f76d": {
+    "message": "কোনো চ্যাট পাওয়া যায়নি",
+    "description": "UI: No chats found"
+  },
+  "ui_No_chats_in_this_folder_db401150": {
+    "message": "এই ফোল্ডারে কোনো চ্যাট নেই",
+    "description": "UI: No chats in this folder"
+  },
+  "ui_No_conversations_found_3c2a9852": {
+    "message": "কোনো চ্যাট পাওয়া যায়নি",
+    "description": "UI: No conversations found"
+  },
+  "ui_No_custom_prompts_yet_661172d4": {
+    "message": "এখনও কোনো নিজস্ব প্রম্পট নেই",
+    "description": "UI: No custom prompts yet"
+  },
+  "ui_No_folders_yet_e0c1ca05": {
+    "message": "এখনও কোনো ফোল্ডার নেই",
+    "description": "UI: No folders yet"
+  },
+  "ui_No_matching_conversations_37a56d5d": {
+    "message": "মিলে এমন কোনো চ্যাট নেই",
+    "description": "UI: No matching conversations"
+  },
+  "ui_No_prompts_found_28288421": {
+    "message": "কোনো প্রম্পট পাওয়া যায়নি",
+    "description": "UI: No prompts found"
+  },
+  "ui_No_prompts_in_this_category_27124e10": {
+    "message": "এই বিভাগে কোনো প্রম্পট নেই",
+    "description": "UI: No prompts in this category"
+  },
+  "ui_OK_85e4b82f": {
+    "message": "ঠিক আছে",
+    "description": "UI: OK"
+  },
+  "ui_Open_Folders_67fb1834": {
+    "message": "ফোল্ডার খুলুন",
+    "description": "UI: Open Folders"
+  },
+  "ui_Opening_email_client__d22f49ec": {
+    "message": "ইমেইল অ্যাপ খোলা হচ্ছে…",
+    "description": "UI: Opening email client..."
+  },
+  "ui_Pin_Messages_fe59f98": {
+    "message": "বার্তা বুকমার্ক করুন",
+    "description": "UI: Pin Messages"
+  },
+  "ui_Pinned_Messages_17b1d7bd": {
+    "message": "বুকমার্ক করা বার্তা",
+    "description": "UI: Pinned Messages"
+  },
+  "ui_Plain_text_file_a17e519c": {
+    "message": "সাধারণ টেক্সট ফাইল",
+    "description": "UI: Plain text file"
+  },
+  "ui_Plain_text_with_formatting_ba1af379": {
+    "message": "ফরম্যাটিংসহ সাধারণ টেক্সট",
+    "description": "UI: Plain text with formatting"
+  },
+  "ui_Please_enter_a_chain_title_37562a29": {
+    "message": "চেইনের শিরোনাম লিখুন",
+    "description": "UI: Please enter a chain title"
+  },
+  "ui_Please_enter_some_text_first_9d90110": {
+    "message": "আগে কিছু লিখুন",
+    "description": "UI: Please enter some text first"
+  },
+  "ui_Please_enter_your_feedback_55ad96f": {
+    "message": "আপনার মতামত লিখুন",
+    "description": "UI: Please enter your feedback"
+  },
+  "ui_Please_fill_in_all_required_fields_3532bb12": {
+    "message": "প্রয়োজনীয় সব ঘর পূরণ করুন",
+    "description": "UI: Please fill in all required fields"
+  },
+  "ui_Please_fill_in_all_variables_f9eaa389": {
+    "message": "সব ভেরিয়েবল পূরণ করুন",
+    "description": "UI: Please fill in all variables"
+  },
+  "ui_Please_open_a_chat_conversation_first_then_click_724ce3a8": {
+    "message": "আগে একটি চ্যাট খুলুন, তারপর ‘চ্যাট এক্সপোর্ট করুন’-এ ক্লিক করুন।",
+    "description": "UI: Please open a chat conversation first, then click \"Export Chat\"."
+  },
+  "ui_Premium_311220de": {
+    "message": "প্রিমিয়াম",
+    "description": "UI: Premium"
+  },
+  "ui_Preparing_to_send__830dd428": {
+    "message": "পাঠানোর প্রস্তুতি চলছে…",
+    "description": "UI: Preparing to send..."
+  },
+  "ui_Print_ready_document_449538d7": {
+    "message": "প্রিন্টের উপযোগী নথি",
+    "description": "UI: Print-ready document"
+  },
+  "ui_Prompt_Library_16590c4c": {
+    "message": "প্রম্পট লাইব্রেরি",
+    "description": "UI: Prompt Library"
+  },
+  "ui_Prompt_created_successfully__7d030b7": {
+    "message": "প্রম্পট সফলভাবে তৈরি হয়েছে!",
+    "description": "UI: Prompt created successfully!"
+  },
+  "ui_Prompt_deleted_fbae63d6": {
+    "message": "প্রম্পট মুছে ফেলা হয়েছে",
+    "description": "UI: Prompt deleted"
+  },
+  "ui_Prompt_enhanced__9a92988e": {
+    "message": "প্রম্পট উন্নত করা হয়েছে!",
+    "description": "UI: Prompt enhanced!"
+  },
+  "ui_Prompt_updated_successfully__cdf8c9f8": {
+    "message": "প্রম্পট সফলভাবে আপডেট হয়েছে!",
+    "description": "UI: Prompt updated successfully!"
+  },
+  "ui_Remove_21a5901d": {
+    "message": "সরান",
+    "description": "UI: Remove"
+  },
+  "ui_Remove_Bookmark_1f33a40b": {
+    "message": "বুকমার্ক সরান",
+    "description": "UI: Remove Bookmark"
+  },
+  "ui_Remove_bookmark_e6d79ceb": {
+    "message": "বুকমার্ক সরান",
+    "description": "UI: Remove bookmark"
+  },
+  "ui_Remove_from_folder_d27c3961": {
+    "message": "ফোল্ডার থেকে সরান",
+    "description": "UI: Remove from folder"
+  },
+  "ui_Rename_Folder_f61e3969": {
+    "message": "ফোল্ডারের নাম বদলান",
+    "description": "UI: Rename Folder"
+  },
+  "ui_Rename_folder_3c334689": {
+    "message": "ফোল্ডারের নাম বদলান",
+    "description": "UI: Rename folder"
+  },
+  "ui_Response_complete_e76928f1": {
+    "message": "উত্তর সম্পূর্ণ হয়েছে",
+    "description": "UI: Response complete"
+  },
+  "ui_Run_8d57e66a": {
+    "message": "চালান",
+    "description": "UI: Run"
+  },
+  "ui_Run_Chain_cf7a1b4b": {
+    "message": "চেইন চালান",
+    "description": "UI: Run Chain"
+  },
+  "ui_Running_Chain_fb033a2d": {
+    "message": "চেইন চলছে",
+    "description": "UI: Running Chain"
+  },
+  "ui_Save_Prompt_5d7115ce": {
+    "message": "প্রম্পট সংরক্ষণ করুন",
+    "description": "UI: Save Prompt"
+  },
+  "ui_Search_bookmarks__bb5372": {
+    "message": "বুকমার্ক খুঁজুন…",
+    "description": "UI: Search bookmarks..."
+  },
+  "ui_Search_conversations__114f0b99": {
+    "message": "চ্যাট খুঁজুন…",
+    "description": "UI: Search conversations..."
+  },
+  "ui_Search_prompts__cc874eec": {
+    "message": "প্রম্পট খুঁজুন…",
+    "description": "UI: Search prompts..."
+  },
+  "ui_Select_All_cd7e3b12": {
+    "message": "সব নির্বাচন করুন",
+    "description": "UI: Select All"
+  },
+  "ui_Send_Feedback_3b46f8a": {
+    "message": "মতামত পাঠান",
+    "description": "UI: Send Feedback"
+  },
+  "ui_Send_button_is_not_ready_faf7e1d5": {
+    "message": "পাঠানোর বোতাম প্রস্তুত নয়",
+    "description": "UI: Send button is not ready"
+  },
+  "ui_Settings_4b058728": {
+    "message": "সেটিংস",
+    "description": "UI: Settings"
+  },
+  "ui_Share_your_thoughts__9a5319db": {
+    "message": "আপনার মতামত লিখুন…",
+    "description": "UI: Share your thoughts..."
+  },
+  "ui_Show_AI_powered_prompt_enhancement_button_127b2187": {
+    "message": "AI দিয়ে প্রম্পট উন্নত করার বোতাম দেখান",
+    "description": "UI: Show AI-powered prompt enhancement button"
+  },
+  "ui_Show_bookmark_icons_on_messages_to_save_them_7b45faef": {
+    "message": "বার্তা সংরক্ষণের জন্য বুকমার্ক আইকন দেখান",
+    "description": "UI: Show bookmark icons on messages to save them"
+  },
+  "ui_Skip_to_Next_b610efcc": {
+    "message": "পরের ধাপে যান",
+    "description": "UI: Skip to Next"
+  },
+  "ui_Stop_Chain_380a1794": {
+    "message": "চেইন থামান",
+    "description": "UI: Stop Chain"
+  },
+  "ui_Structured_data_format_d92a4575": {
+    "message": "কাঠামোবদ্ধ ডেটা ফরম্যাট",
+    "description": "UI: Structured data format"
+  },
+  "ui_Styled_web_page_a4038dd7": {
+    "message": "সাজানো ওয়েব পেজ",
+    "description": "UI: Styled web page"
+  },
+  "ui_Taking_longer_than_expected__9c1df667": {
+    "message": "প্রত্যাশার চেয়ে বেশি সময় লাগছে…",
+    "description": "UI: Taking longer than expected..."
+  },
+  "ui_Text_3e142d5e": {
+    "message": "টেক্সট",
+    "description": "UI: Text"
+  },
+  "ui_This_action_cannot_be_undone_The_selected_conver_9ba1d2ff": {
+    "message": "এটি আর ফেরানো যাবে না। নির্বাচিত চ্যাটগুলো স্থায়ীভাবে মুছে যাবে।",
+    "description": "UI: This action cannot be undone. The selected conversations will be permanently deleted."
+  },
+  "ui_This_chain_requires_the_following_variables__f4da2419": {
+    "message": "এই চেইনের জন্য নিচের ভেরিয়েবলগুলো প্রয়োজন:",
+    "description": "UI: This chain requires the following variables:"
+  },
+  "ui_This_tool_exports_the_conversation_currently_dis_51c2d93f": {
+    "message": "এই টুল আপনার ব্রাউজারে বর্তমানে দেখানো চ্যাট এক্সপোর্ট করে।",
+    "description": "UI: This tool exports the conversation currently displayed in your browser."
+  },
+  "ui_Title_24d471a9": {
+    "message": "শিরোনাম",
+    "description": "UI: Title"
+  },
+  "ui_Try_a_different_search_term_e858af32": {
+    "message": "অন্য শব্দ দিয়ে খুঁজুন",
+    "description": "UI: Try a different search term"
+  },
+  "ui_Untitled_Chat_75c48eee": {
+    "message": "শিরোনামহীন চ্যাট",
+    "description": "UI: Untitled Chat"
+  },
+  "ui_Update_Chain_9936e085": {
+    "message": "চেইন আপডেট করুন",
+    "description": "UI: Update Chain"
+  },
+  "ui_Update_Prompt_6b06240a": {
+    "message": "প্রম্পট আপডেট করুন",
+    "description": "UI: Update Prompt"
+  },
+  "ui_Use_ba1c5c94": {
+    "message": "ব্যবহার করুন",
+    "description": "UI: Use"
+  },
+  "ui_View_all_available_shortcuts_c8e66dbf": {
+    "message": "সব শর্টকাট দেখুন",
+    "description": "UI: View all available shortcuts"
+  },
+  "ui_Wait_for_DeepSeek_to_finish_responding_314e65ca": {
+    "message": "DeepSeek-এর উত্তর শেষ হওয়া পর্যন্ত অপেক্ষা করুন",
+    "description": "UI: Wait for DeepSeek to finish responding"
+  },
+  "ui_Wait_for_the_current_response_before_starting_a__e2b64043": {
+    "message": "চেইন চালানোর আগে বর্তমান উত্তর শেষ হওয়া পর্যন্ত অপেক্ষা করুন",
+    "description": "UI: Wait for the current response before starting a chain"
+  },
+  "ui_Wait_for_the_response_to_finish_before_skipping_7c05de4d": {
+    "message": "পরের ধাপে যাওয়ার আগে উত্তর শেষ হওয়া পর্যন্ত অপেক্ষা করুন",
+    "description": "UI: Wait for the response to finish before skipping"
+  },
+  "ui_Waiting_for_DeepSeek_to_respond__7c242189": {
+    "message": "DeepSeek-এর উত্তরের অপেক্ষায়…",
+    "description": "UI: Waiting for DeepSeek to respond..."
+  },
+  "ui_e_g_Research_Paper_Writing_Chain_af7025dd": {
+    "message": "যেমন, গবেষণাপত্র লেখার চেইন",
+    "description": "UI: e.g., Research Paper Writing Chain"
+  },
+  "ui_Enter_a_descriptive_title_b8820ab2": {
+    "message": "একটি স্পষ্ট শিরোনাম লিখুন",
+    "description": "UI: Enter a descriptive title"
+  },
+  "ui_Enter_folder_name__c2969960": {
+    "message": "ফোল্ডারের নাম লিখুন…",
+    "description": "UI: Enter folder name..."
+  },
+  "ui_Enter_new_folder_name__ffdfb0ca": {
+    "message": "ফোল্ডারের নতুন নাম লিখুন…",
+    "description": "UI: Enter new folder name..."
+  },
+  "ui_Enter_value_4f11af6c": {
+    "message": "মান লিখুন",
+    "description": "UI: Enter value"
+  },
+  "ui_Enter_value__a2bb5542": {
+    "message": "মান লিখুন…",
+    "description": "UI: Enter value..."
+  },
+  "ui__1_enabled_bc237f7f": {
+    "message": "$VALUE1$ চালু হয়েছে",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: $1 enabled"
+  },
+  "ui__1_disabled_57909b8a": {
+    "message": "$VALUE1$ বন্ধ হয়েছে",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: $1 disabled"
+  },
+  "ui_Delete_folder_1_Chats_inside_will_not_be_deleted_50ed56a4": {
+    "message": "‘$VALUE1$’ ফোল্ডারটি মুছবেন? এর ভেতরের চ্যাট মোছা হবে না।",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Delete folder \"$1\"? Chats inside will not be deleted."
+  },
+  "ui_Showing_chats_in_1__af8fa6e3": {
+    "message": "‘$VALUE1$’-এর চ্যাট দেখানো হচ্ছে",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Showing chats in \"$1\""
+  },
+  "ui_Bookmarks_1_b51a87c3": {
+    "message": "বুকমার্ক: $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Bookmarks: $1"
+  },
+  "ui_Delete_all_bookmarks_1_This_cannot_be_undone__e13d68f6": {
+    "message": "সব বুকমার্ক ($VALUE1$) মুছবেন? এটি আর ফেরানো যাবে না।",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Delete all bookmarks ($1)? This cannot be undone."
+  },
+  "ui__1_minutes_ago_e2bf9812": {
+    "message": "$VALUE1$ মিনিট আগে",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: $1 minutes ago"
+  },
+  "ui__1_hours_ago_f8ea0adc": {
+    "message": "$VALUE1$ ঘণ্টা আগে",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: $1 hours ago"
+  },
+  "ui__1_days_ago_64a9653c": {
+    "message": "$VALUE1$ দিন আগে",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: $1 days ago"
+  },
+  "ui_Just_now_8440e32f": {
+    "message": "এইমাত্র",
+    "description": "UI: Just now"
+  },
+  "ui_Selected_1_5c8777cd": {
+    "message": "নির্বাচিত: $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Selected: $1"
+  },
+  "ui_Delete_1__615dcbb0": {
+    "message": "মুছুন ($VALUE1$)",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Delete ($1)"
+  },
+  "ui_Conversations_deleted_1_Refreshing__a9626d46": {
+    "message": "মুছে ফেলা চ্যাট: $VALUE1$। রিফ্রেশ হচ্ছে…",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Conversations deleted: $1. Refreshing..."
+  },
+  "ui_Deleted_1_Failed_2_Refreshing__59ca43ef": {
+    "message": "মুছে ফেলা হয়েছে: $VALUE1$। ব্যর্থ: $VALUE2$। রিফ্রেশ হচ্ছে…",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      },
+      "value2": {
+        "content": "$2"
+      }
+    },
+    "description": "UI: Deleted: $1. Failed: $2. Refreshing..."
+  },
+  "ui_Delete_conversations_1__2cfccaf5": {
+    "message": "চ্যাটগুলো ($VALUE1$) মুছবেন?",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Delete conversations ($1)?"
+  },
+  "ui_Variables_1_ccdcbe7f": {
+    "message": "ভেরিয়েবল: $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Variables: $1"
+  },
+  "ui_Steps_1_bb4c250d": {
+    "message": "ধাপ: $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Steps: $1"
+  },
+  "ui__1_more_8680efa6": {
+    "message": "আরও $VALUE1$টি",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: +$1 more"
+  },
+  "ui_Steps_1_10_86b2f0a1": {
+    "message": "ধাপ: ১০টির মধ্যে $VALUE1$টি",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Steps: $1 / 10"
+  },
+  "ui_Step_1_exceeds_the_6000_character_limit_88c9faa7": {
+    "message": "$VALUE1$ নম্বর ধাপটি ৬০০০ অক্ষরের সীমা ছাড়িয়েছে",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Step $1 exceeds the 6000-character limit"
+  },
+  "ui_Step_1_fc488abe": {
+    "message": "ধাপ $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Step $1"
+  },
+  "ui_Enter_the_prompt_for_step_1_Use_variable_for_dyn_7df2f7ab": {
+    "message": "$VALUE1$ নম্বর ধাপের প্রম্পট লিখুন… পরিবর্তনশীল মানের জন্য {{variable}} ব্যবহার করুন।",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Enter the prompt for step $1... Use {{variable}} for dynamic values."
+  },
+  "ui_Step_1_2_e6dd938b": {
+    "message": "$VALUE2$টির মধ্যে ধাপ $VALUE1$",
+    "placeholders": {
+      "value2": {
+        "content": "$2"
+      },
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Step $1 / $2"
+  },
+  "ui_Messages_1_2c330298": {
+    "message": "বার্তা: $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Messages: $1"
+  },
+  "ui_Exported_as_1_successfully__5f6b8065": {
+    "message": "সফলভাবে $VALUE1$ হিসেবে এক্সপোর্ট হয়েছে!",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Exported as $1 successfully!"
+  },
+  "ui_Export_failed_Please_try_again__6086217d": {
+    "message": "এক্সপোর্ট করা যায়নি। আবার চেষ্টা করুন।",
+    "description": "UI: Export failed. Please try again."
+  },
+  "ui_My_Prompts_91bf3c0c": {
+    "message": "আমার প্রম্পট",
+    "description": "UI: My Prompts"
+  },
+  "ui_Development_a2381c8a": {
+    "message": "প্রোগ্রামিং",
+    "description": "UI: Development"
+  },
+  "ui_Writing_3c4e7def": {
+    "message": "লেখালেখি",
+    "description": "UI: Writing"
+  },
+  "ui_Business_7dbaf6b": {
+    "message": "ব্যবসা",
+    "description": "UI: Business"
+  },
+  "ui_Academic_7a88029a": {
+    "message": "পড়াশোনা",
+    "description": "UI: Academic"
+  },
+  "ui_Send_to_DeepSeek_e7a74982": {
+    "message": "DeepSeek-এ পাঠান",
+    "description": "UI: Send to DeepSeek"
+  },
+  "ui_A_chain_is_already_running_e7f4f630": {
+    "message": "একটি চেইন ইতিমধ্যে চলছে",
+    "description": "UI: A chain is already running"
+  },
+  "ui_Could_not_find_DeepSeek_input_field_b7d37804": {
+    "message": "DeepSeek-এর লেখার ঘর খুঁজে পাওয়া যায়নি",
+    "description": "UI: Could not find DeepSeek input field"
+  },
+  "ui_Could_not_find_send_button_4b406d18": {
+    "message": "পাঠানোর বোতাম খুঁজে পাওয়া যায়নি",
+    "description": "UI: Could not find send button"
+  },
+  "ui_Text_sent_to_DeepSeek__c82e2888": {
+    "message": "লেখা DeepSeek-এ পাঠানো হয়েছে!",
+    "description": "UI: Text sent to DeepSeek!"
+  }
+}

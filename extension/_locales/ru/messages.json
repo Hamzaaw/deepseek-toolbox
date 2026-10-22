@@ -48,5 +48,45 @@
         "example": "chat.deepseek.com"
       }
     }
+  },
+  "toolboxLocale": {
+    "message": "ru",
+    "description": "Language of this catalog; used for dates and direction."
+  },
+  "toolboxDirection": {
+    "message": "ltr",
+    "description": "Direction of extension UI, never the host chat."
+  },
+  "ui_Manage_Folders_d47cd85b": {
+    "message": "Папки",
+    "description": "UI: Manage Folders"
+  },
+  "ui_FOLDERS_78bae08a": {
+    "message": "Папки",
+    "description": "UI: FOLDERS"
+  },
+  "ui_Open_Folders_67fb1834": {
+    "message": "Папки",
+    "description": "UI: Open Folders"
+  },
+  "ui_Pinned_Messages_17b1d7bd": {
+    "message": "Закреплённые сообщения",
+    "description": "UI: Pinned Messages"
+  },
+  "ui_Bookmarked_Messages_451dd7fc": {
+    "message": "Закреплённые сообщения",
+    "description": "UI: Bookmarked Messages"
+  },
+  "ui_Prompt_Library_16590c4c": {
+    "message": "Библиотека промптов",
+    "description": "UI: Prompt Library"
+  },
+  "ui_Chat_Export_c761e6a7": {
+    "message": "Экспорт чата",
+    "description": "UI: Chat Export"
+  },
+  "ui_Export_Chat_847d0377": {
+    "message": "Экспорт чата",
+    "description": "UI: Export Chat"
   }
 }

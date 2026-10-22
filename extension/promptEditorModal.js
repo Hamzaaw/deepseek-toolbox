@@ -46,7 +46,9 @@ const PromptEditorModal = (function() {
 
     modal.innerHTML = getModalHTML(colors, isEdit, prompt);
 
+    ToolboxI18n.applyDirection(backdrop);
     document.body.appendChild(backdrop);
+    ToolboxI18n.applyDirection(modal);
     document.body.appendChild(modal);
     document.addEventListener('keydown', handleEscape);
 
@@ -72,7 +74,7 @@ const PromptEditorModal = (function() {
             <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
           </svg>
-          <h2 style="margin: 0; font-size: 18px; font-weight: 600; color: ${colors.text};">${isEdit ? 'Edit Prompt' : 'Create New Prompt'}</h2>
+          <h2 style="margin: 0; font-size: 18px; font-weight: 600; color: ${colors.text};">${isEdit ? ToolboxI18n.t("Edit Prompt") : ToolboxI18n.t("Create New Prompt")}</h2>
         </div>
         <button id="ds-editor-close" style="background: none; border: none; padding: 8px; cursor: pointer; color: ${colors.textSecondary}; border-radius: 8px; display: flex;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -83,28 +85,28 @@ const PromptEditorModal = (function() {
         <form id="ds-prompt-form" style="display: flex; flex-direction: column; gap: 20px;">
           <div>
             <label style="display: block; font-size: 13px; font-weight: 500; color: ${colors.text}; margin-bottom: 6px;">
-              Title <span style="color: ${colors.error};">*</span>
+              ${ToolboxI18n.html("Title")} <span style="color: ${colors.error};">*</span>
             </label>
-            <input type="text" id="ds-prompt-title" placeholder="Enter a descriptive title" required
+            <input type="text" id="ds-prompt-title" placeholder="${ToolboxI18n.html("Enter a descriptive title")}" required
               value="${prompt ? escapeHtml(prompt.title) : ''}"
               style="width: 100%; padding: 10px 12px; background: ${colors.bgSecondary}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; outline: none; transition: border-color 0.2s; box-sizing: border-box;">
           </div>
           
           <div>
             <label style="display: block; font-size: 13px; font-weight: 500; color: ${colors.text}; margin-bottom: 6px;">
-              Description
+              ${ToolboxI18n.html("Description")}
             </label>
-            <input type="text" id="ds-prompt-description" placeholder="Brief description of what this prompt does"
+            <input type="text" id="ds-prompt-description" placeholder="${ToolboxI18n.html("Brief description of what this prompt does")}"
               value="${prompt ? escapeHtml(prompt.description || '') : ''}"
               style="width: 100%; padding: 10px 12px; background: ${colors.bgSecondary}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; outline: none; transition: border-color 0.2s; box-sizing: border-box;">
           </div>
           
           <div>
             <label style="display: block; font-size: 13px; font-weight: 500; color: ${colors.text}; margin-bottom: 6px;">
-              Content <span style="color: ${colors.error};">*</span>
-              <span style="font-weight: 400; color: ${colors.textSecondary};"> (Use {variable_name} for placeholders)</span>
+              ${ToolboxI18n.html("Content")} <span style="color: ${colors.error};">*</span>
+              <span style="font-weight: 400; color: ${colors.textSecondary};"> ${ToolboxI18n.html("(Use {variable_name} for placeholders)")}</span>
             </label>
-            <textarea id="ds-prompt-content" placeholder="Enter your prompt template...&#10;&#10;Example:&#10;Write a blog post about {topic} for {audience}.&#10;Tone: {tone}" required rows="8"
+            <textarea id="ds-prompt-content" placeholder="${ToolboxI18n.html("Enter your prompt template...\n\nExample:\nWrite a blog post about {topic} for {audience}.\nTone: {tone}")}" required rows="8"
               style="width: 100%; padding: 12px; background: ${colors.bgSecondary}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 13px; font-family: 'SF Mono', Monaco, monospace; outline: none; resize: vertical; min-height: 150px; transition: border-color 0.2s; box-sizing: border-box;">${prompt ? escapeHtml(prompt.content) : ''}</textarea>
           </div>
           
@@ -113,7 +115,7 @@ const PromptEditorModal = (function() {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>
               </svg>
-              <span>Detected Variables:</span>
+              <span>${ToolboxI18n.html("Detected Variables:")}</span>
             </div>
             <div id="ds-variables-list" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
           </div>
@@ -122,10 +124,10 @@ const PromptEditorModal = (function() {
       
       <div style="padding: 16px 24px; border-top: 1px solid ${colors.border}; display: flex; gap: 12px; flex-shrink: 0;">
         <button id="ds-editor-cancel" style="flex: 1; padding: 10px 20px; background: transparent; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.15s;">
-          Cancel
+          ${ToolboxI18n.html("Cancel")}
         </button>
         <button id="ds-editor-save" style="flex: 1; padding: 10px 20px; background: ${colors.accent}; border: none; border-radius: 8px; color: white; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.15s;">
-          ${isEdit ? 'Update Prompt' : 'Save Prompt'}
+          ${isEdit ? ToolboxI18n.t("Update Prompt") : ToolboxI18n.t("Save Prompt")}
         </button>
       </div>
       
@@ -205,7 +207,7 @@ const PromptEditorModal = (function() {
     const content = modal.querySelector('#ds-prompt-content').value.trim();
     
     if (!title || !content) {
-      showToast('Please fill in all required fields', 'error');
+      showToast(ToolboxI18n.t("Please fill in all required fields"), 'error');
       return;
     }
     
@@ -215,10 +217,10 @@ const PromptEditorModal = (function() {
       let result;
       if (editingPrompt) {
         result = await PromptLibraryService.updatePrompt(editingPrompt.id, promptData);
-        showToast('Prompt updated successfully!', 'success');
+        showToast(ToolboxI18n.t("Prompt updated successfully!"), 'success');
       } else {
         result = await PromptLibraryService.addPrompt(promptData);
-        showToast('Prompt created successfully!', 'success');
+        showToast(ToolboxI18n.t("Prompt created successfully!"), 'success');
       }
       
       if (onSaveCallback) {
@@ -228,7 +230,7 @@ const PromptEditorModal = (function() {
       setTimeout(close, 500);
     } catch (error) {
       console.error('[PromptEditorModal] Save error:', error);
-      showToast('Failed to save prompt', 'error');
+      showToast(ToolboxI18n.t("Failed to save prompt"), 'error');
     }
   }
 
@@ -245,6 +247,7 @@ const PromptEditorModal = (function() {
       : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="${colors.success}" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>`;
     
     toast.innerHTML = icon + '<span>' + escapeHtml(message) + '</span>';
+    ToolboxI18n.applyDirection(toast);
     document.body.appendChild(toast);
     
     setTimeout(() => {

@@ -49,7 +49,9 @@ const FolderModal = (function() {
     
     modal.innerHTML = getModalHTML(colors);
     
+    ToolboxI18n.applyDirection(backdrop);
     document.body.appendChild(backdrop);
+    ToolboxI18n.applyDirection(modal);
     document.body.appendChild(modal);
     
     // Escape key handler
@@ -74,7 +76,7 @@ const FolderModal = (function() {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="${colors.accent}" stroke-width="2">
             <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
           </svg>
-          <h2 style="margin: 0; font-size: 18px; font-weight: 600; color: ${colors.text};">Manage Folders</h2>
+          <h2 style="margin: 0; font-size: 18px; font-weight: 600; color: ${colors.text};">${ToolboxI18n.html("Manage Folders")}</h2>
         </div>
         <button id="ds-modal-close" style="background: none; border: none; padding: 8px; cursor: pointer; color: ${colors.textSecondary}; border-radius: 8px;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -85,14 +87,14 @@ const FolderModal = (function() {
       
       <div style="display: flex; flex: 1; overflow: hidden;">
         <!-- Folders Panel -->
-        <div style="width: 280px; border-right: 1px solid ${colors.border}; display: flex; flex-direction: column;">
+        <div style="width: 280px; border-inline-end: 1px solid ${colors.border}; display: flex; flex-direction: column;">
           <div style="padding: 16px; border-bottom: 1px solid ${colors.border}; display: flex; align-items: center; justify-content: space-between;">
-            <span style="font-size: 13px; font-weight: 600; color: ${colors.textSecondary};">FOLDERS</span>
+            <span style="font-size: 13px; font-weight: 600; color: ${colors.textSecondary};">${ToolboxI18n.html("FOLDERS")}</span>
             <button id="ds-add-folder" style="background: ${colors.accent}; color: white; border: none; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 4px;">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                 <path d="M12 5v14M5 12h14"/>
               </svg>
-              New
+              ${ToolboxI18n.html("New")}
             </button>
           </div>
           <div id="ds-folders-list" style="flex: 1; overflow-y: auto; padding: 8px;"></div>
@@ -101,8 +103,8 @@ const FolderModal = (function() {
         <!-- Chats Panel -->
         <div style="flex: 1; display: flex; flex-direction: column;">
           <div style="padding: 16px; border-bottom: 1px solid ${colors.border};">
-            <span style="font-size: 13px; font-weight: 600; color: ${colors.textSecondary};">CHATS</span>
-            <p id="ds-chats-hint" style="margin: 4px 0 0; font-size: 12px; color: ${colors.textSecondary};">Click the folder icon to add a chat to a folder</p>
+            <span style="font-size: 13px; font-weight: 600; color: ${colors.textSecondary};">${ToolboxI18n.html("CHATS")}</span>
+            <p id="ds-chats-hint" style="margin: 4px 0 0; font-size: 12px; color: ${colors.textSecondary};">${ToolboxI18n.html("Click the folder icon to add a chat to a folder")}</p>
           </div>
           <div id="ds-chats-list" style="flex: 1; overflow-y: auto; padding: 8px;"></div>
         </div>
@@ -110,7 +112,7 @@ const FolderModal = (function() {
       
       <div style="padding: 16px 24px; border-top: 1px solid ${colors.border}; display: flex; justify-content: flex-end;">
         <button id="ds-modal-done" style="background: ${colors.accent}; color: white; border: none; padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;">
-          Done
+          ${ToolboxI18n.html("Done")}
         </button>
       </div>
     `;
@@ -143,8 +145,8 @@ const FolderModal = (function() {
     }
     
     const name = await DialogUtils.showPrompt({
-      title: 'Create Folder',
-      placeholder: 'Enter folder name...'
+      title: ToolboxI18n.t("Create Folder"),
+      placeholder: ToolboxI18n.t("Enter folder name...")
     });
     if (name && name.trim()) {
       FolderService.addFolder(name.trim()).then(() => {
@@ -166,8 +168,8 @@ const FolderModal = (function() {
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 12px; opacity: 0.5;">
             <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
           </svg>
-          <p style="margin: 0; font-size: 14px;">No folders yet</p>
-          <p style="margin: 8px 0 0; font-size: 12px;">Click "New" to create one</p>
+          <p style="margin: 0; font-size: 14px;">${ToolboxI18n.html("No folders yet")}</p>
+          <p style="margin: 8px 0 0; font-size: 12px;">${ToolboxI18n.html("Click \"New\" to create one")}</p>
         </div>
       `;
       return;
@@ -190,13 +192,13 @@ const FolderModal = (function() {
           </svg>
           <span style="flex: 1; font-size: 14px; color: ${colors.text};">${escapeHtml(folder.name)}</span>
           <span style="font-size: 12px; color: ${colors.textSecondary}; background: ${colors.hover}; padding: 2px 8px; border-radius: 10px;">${chatCount}</span>
-          <button class="ds-folder-edit" data-folder-id="${folder.id}" title="Rename folder" style="background: none; border: none; padding: 4px; cursor: pointer; color: ${colors.textSecondary}; opacity: 0.5; border-radius: 4px;">
+          <button class="ds-folder-edit" data-folder-id="${folder.id}" title="${ToolboxI18n.html("Rename folder")}" style="background: none; border: none; padding: 4px; cursor: pointer; color: ${colors.textSecondary}; opacity: 0.5; border-radius: 4px;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
               <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
             </svg>
           </button>
-          <button class="ds-folder-delete" data-folder-id="${folder.id}" title="Delete folder" style="background: none; border: none; padding: 4px; cursor: pointer; color: ${colors.textSecondary}; opacity: 0.5; border-radius: 4px;">
+          <button class="ds-folder-delete" data-folder-id="${folder.id}" title="${ToolboxI18n.html("Delete folder")}" style="background: none; border: none; padding: 4px; cursor: pointer; color: ${colors.textSecondary}; opacity: 0.5; border-radius: 4px;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
             </svg>
@@ -223,8 +225,8 @@ const FolderModal = (function() {
         const folderId = btn.dataset.folderId;
         const folder = folders.find(f => f.id === folderId);
         const newName = await DialogUtils.showPrompt({
-          title: 'Rename Folder',
-          placeholder: 'Enter new folder name...',
+          title: ToolboxI18n.t("Rename Folder"),
+          placeholder: ToolboxI18n.t("Enter new folder name..."),
           defaultValue: folder.name
         });
         if (newName && newName.trim() && newName.trim() !== folder.name) {
@@ -242,9 +244,9 @@ const FolderModal = (function() {
         const folderId = btn.dataset.folderId;
         const folder = folders.find(f => f.id === folderId);
         const confirmed = await DialogUtils.showConfirm({
-          title: 'Delete Folder',
-          message: `Are you sure you want to delete "${folder.name}"? Chats inside will not be deleted.`,
-          confirmText: 'Delete',
+          title: ToolboxI18n.t("Delete Folder"),
+          message: ToolboxI18n.t('Delete folder "$1"? Chats inside will not be deleted.', [folder.name]),
+          confirmText: ToolboxI18n.t("Delete"),
           type: 'danger'
         });
         if (confirmed) {
@@ -261,7 +263,7 @@ const FolderModal = (function() {
     const chatElements = document.querySelectorAll(DS_SELECTORS.chatItem);
     chatsCache = Array.from(chatElements).map(el => ({
       id: FolderService.extractChatId(el.href),
-      title: el.querySelector('.c08e6e93')?.textContent || 'Untitled Chat',
+      title: el.querySelector('.c08e6e93')?.textContent || ToolboxI18n.t("Untitled Chat"),
       href: el.href
     })).filter(c => c.id);
     
@@ -279,16 +281,16 @@ const FolderModal = (function() {
     let chatsToShow = chatsCache;
     if (selectedFolderId) {
       const folder = folders.find(f => f.id === selectedFolderId);
-      hint.textContent = `Showing chats in "${folder?.name}"`;
+      hint.textContent = ToolboxI18n.t('Showing chats in "$1"', [folder?.name]);
       chatsToShow = chatsCache.filter(c => chatMap[c.id] === selectedFolderId);
     } else {
-      hint.textContent = 'Click the folder icon to add a chat to a folder';
+      hint.textContent = ToolboxI18n.t("Click the folder icon to add a chat to a folder");
     }
     
     if (chatsToShow.length === 0) {
       container.innerHTML = `
         <div style="text-align: center; padding: 40px 20px; color: ${colors.textSecondary};">
-          <p style="margin: 0; font-size: 14px;">${selectedFolderId ? 'No chats in this folder' : 'No chats found'}</p>
+          <p style="margin: 0; font-size: 14px;">${selectedFolderId ? ToolboxI18n.t("No chats in this folder") : ToolboxI18n.t("No chats found")}</p>
         </div>
       `;
       return;
@@ -314,13 +316,13 @@ const FolderModal = (function() {
             </div>` : ''}
           </div>
           ${folder ? `
-            <button class="ds-chat-remove" data-chat-id="${chat.id}" title="Remove from folder" style="background: none; border: none; padding: 6px; cursor: pointer; color: ${colors.textSecondary}; border-radius: 6px;">
+            <button class="ds-chat-remove" data-chat-id="${chat.id}" title="${ToolboxI18n.html("Remove from folder")}" style="background: none; border: none; padding: 6px; cursor: pointer; color: ${colors.textSecondary}; border-radius: 6px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 6L6 18M6 6l12 12"/>
               </svg>
             </button>
           ` : `
-            <button class="ds-chat-add" data-chat-id="${chat.id}" title="Add to folder" style="background: ${colors.hover}; border: none; padding: 6px; cursor: pointer; color: ${colors.textSecondary}; border-radius: 6px;">
+            <button class="ds-chat-add" data-chat-id="${chat.id}" title="${ToolboxI18n.html("Add to folder")}" style="background: ${colors.hover}; border: none; padding: 6px; cursor: pointer; color: ${colors.textSecondary}; border-radius: 6px;">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
                 <path d="M12 10v4M10 12h4"/>
@@ -376,8 +378,8 @@ const FolderModal = (function() {
     const folders = await FolderService.getFolders();
     if (folders.length === 0) {
       await DialogUtils.showAlert({
-        title: 'No Folders',
-        message: 'Create a folder first before adding chats to it.',
+        title: ToolboxI18n.t("No Folders"),
+        message: ToolboxI18n.t("Create a folder first before adding chats to it."),
         type: 'warning'
       });
       return;
@@ -405,6 +407,7 @@ const FolderModal = (function() {
       </div>
     `).join('');
     
+    ToolboxI18n.applyDirection(picker);
     document.body.appendChild(picker);
     
     // Position near button

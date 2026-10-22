@@ -426,3 +426,14 @@ body.dark {
     opacity: 0.85;
     border: 1px solid var(--ds-toolbox-accent);
 }
+
+/* Direction is scoped to Toolbox roots, never the host chat page. */
+[data-toolbox-ui] { text-align: start; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif; }
+[data-toolbox-ui] input, [data-toolbox-ui] textarea { text-align: start; }
+[data-toolbox-ui] kbd, [data-toolbox-ui] pre, [data-toolbox-ui] code { unicode-bidi: isolate; }
+[data-toolbox-ui] button { white-space: normal; }
+[data-toolbox-ui][dir="rtl"] .ds-toolbox-dropdown { left: auto; right: 0; }
+[data-toolbox-ui][lang="fa"] textarea,
+[data-toolbox-ui][lang="bn"] textarea,
+[data-toolbox-ui][lang="ar"] textarea { font-family: inherit !important; }
+[data-toolbox-ui] .ds-char-count { direction: ltr; unicode-bidi: isolate; }

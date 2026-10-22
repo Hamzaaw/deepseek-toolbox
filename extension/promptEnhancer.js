@@ -28,11 +28,12 @@
           <path d="M19 17L19.5 19L21 19.5L19.5 20L19 22L18.5 20L17 19.5L18.5 19L19 17Z"/>
         </svg>
       </div>
-      <span><span class="_6dbc175 ds-enhance-text">Enhance</span></span>
+      <span><span class="_6dbc175 ds-enhance-text">${ToolboxI18n.html("Enhance")}</span></span>
       <div class="ds-focus-ring"></div>
     `;
     
     button.addEventListener('click', handleEnhanceClick);
+    ToolboxI18n.applyDirection(button);
     return button;
   }
   
@@ -99,7 +100,7 @@
     
     const text = getTextareaValue(textarea).trim();
     if (!text) {
-      showToast('Please enter some text first', 'error');
+      showToast(ToolboxI18n.t("Please enter some text first"), 'error');
       return;
     }
     
@@ -115,7 +116,7 @@
       
       if (response && response.success && response.improvedPrompt) {
         if (!enabled || !textarea.isConnected || location.pathname !== originalPath || textarea.value !== originalValue) {
-          showToast('Enhancement finished; your changed draft was preserved', 'error');
+          showToast(ToolboxI18n.t("Enhancement finished; your changed draft was preserved"), 'error');
           return;
         }
         setTextareaValue(textarea, response.improvedPrompt);
@@ -124,14 +125,14 @@
           apiClient.incrementDailyUsage('enhancePrompts');
         }
         updateButtonState('success');
-        showToast('Prompt enhanced!', 'success');
+        showToast(ToolboxI18n.t("Prompt enhanced!"), 'success');
       } else {
-        throw new Error(response?.error || 'Enhancement failed');
+        throw new Error(response?.error || ToolboxI18n.t("Enhancement failed"));
       }
     } catch (error) {
       console.error('[DeepSeek Toolbox] Enhance error:', error);
       updateButtonState('error');
-      showToast('Enhancement failed', 'error');
+      showToast(ToolboxI18n.t("Enhancement failed"), 'error');
     }
     } finally {
       isEnhancing = false;
@@ -148,7 +149,7 @@
     switch (state) {
       case 'enhancing':
         if (icon) icon.classList.add('ds-enhance-spinning');
-        if (text) text.textContent = 'Enhancing...';
+        if (text) text.textContent = ToolboxI18n.t("Enhancing...");
         enhanceButton.setAttribute('aria-disabled', 'true');
         break;
       case 'success':
@@ -156,12 +157,12 @@
           icon.classList.remove('ds-enhance-spinning');
           icon.innerHTML = `<path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`;
         }
-        if (text) text.textContent = 'Enhanced!';
+        if (text) text.textContent = ToolboxI18n.t("Enhanced!");
         enhanceButton.setAttribute('aria-disabled', 'false');
         break;
       case 'error':
         if (icon) icon.classList.remove('ds-enhance-spinning');
-        if (text) text.textContent = 'Failed';
+        if (text) text.textContent = ToolboxI18n.t("Failed");
         enhanceButton.setAttribute('aria-disabled', 'false');
         break;
       default:
@@ -173,7 +174,7 @@
             <path d="M19 17L19.5 19L21 19.5L19.5 20L19 22L18.5 20L17 19.5L18.5 19L19 17Z"/>
           `;
         }
-        if (text) text.textContent = 'Enhance';
+        if (text) text.textContent = ToolboxI18n.t("Enhance");
         enhanceButton.setAttribute('aria-disabled', 'false');
     }
   }
@@ -191,6 +192,7 @@
       }
       <span>${message}</span>
     `;
+    ToolboxI18n.applyDirection(toast);
     document.body.appendChild(toast);
     
     setTimeout(() => {

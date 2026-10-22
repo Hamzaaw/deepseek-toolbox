@@ -18,6 +18,7 @@
         "https://chat.deepseek.com/*"
       ],
       "js": [
+        "i18n.js",
         "featureAccess.js",
         "config.js",
         "deepseekDOM.js",

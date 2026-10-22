@@ -1,4 +1,4 @@
-importScripts('featureAccess.js', 'storageMutations.js');
+importScripts('i18n.js', 'featureAccess.js', 'storageMutations.js');
 
 const ENHANCE_API_URL = 'https://claude-api.hamzaw.com/api/claude/enhance';
 const API_URL = 'https://deepseek-api.hamzaw.com';
@@ -45,7 +45,7 @@ function createSendToDeepSeekContextMenu() {
   chrome.contextMenus.removeAll(() => {
     chrome.contextMenus.create({
       id: 'sendToDeepSeek',
-      title: 'Send to DeepSeek',
+      title: ToolboxI18n.t("Send to DeepSeek"),
       contexts: ['selection']
     });
     if (DEBUG) console.log('[DeepSeek Toolbox] Context menu created');

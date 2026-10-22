@@ -42,6 +42,8 @@ Folders, bookmarks, prompts, chains, and settings are stored in your browser. En
 
 Permissions remain `storage`, `activeTab`, and `contextMenus`, with host access only to `chat.deepseek.com`. See the [privacy details](PRIVACY.md) for network requests and data handling.
 
+Persian and Bengali interface translations are included. See [language coverage and translation contributions](docs/TRANSLATIONS.md).
+
 ## Make it better
 
 Found a bug? Open an issue with your browser version and steps to reproduce it. Small pull requests for fixes, translations, and usability are welcome. Keep permissions unchanged and preserve existing saved data. For security reports, use the private contact in [Privacy](PRIVACY.md).

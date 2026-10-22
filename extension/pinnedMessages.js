@@ -62,7 +62,7 @@ const PinnedMessages = (function() {
     conversationId = urlMatch ? urlMatch[1] : null;
 
     const activeChat = document.querySelector('a._546d736.cefc9c43');
-    conversationTitle = activeChat?.querySelector('.c08e6e93')?.textContent || 'New Chat';
+    conversationTitle = activeChat?.querySelector('.c08e6e93')?.textContent || ToolboxI18n.t("New Chat");
     
     log('Conversation:', conversationId, conversationTitle);
   }
@@ -96,7 +96,7 @@ const PinnedMessages = (function() {
       if (btn) {
         if (btn.classList.contains('pinned') !== isPinned) {
           btn.classList.toggle('pinned', isPinned);
-          btn.title = isPinned ? 'Remove bookmark' : 'Bookmark message';
+          btn.title = isPinned ? ToolboxI18n.t("Remove bookmark") : ToolboxI18n.t("Bookmark message");
           btn.querySelector('.ds-icon').innerHTML = getBookmarkIcon(isPinned);
         }
         return;
@@ -105,7 +105,7 @@ const PinnedMessages = (function() {
       btn.className = 'db183363 ds-icon-button ds-icon-button--m ds-icon-button--sizing-container ds-pin-btn' + (isPinned ? ' pinned' : '');
       btn.setAttribute('tabindex', '0');
       btn.setAttribute('role', 'button');
-      btn.title = isPinned ? 'Remove bookmark' : 'Bookmark message';
+      btn.title = isPinned ? ToolboxI18n.t("Remove bookmark") : ToolboxI18n.t("Bookmark message");
       btn.dataset.messageId = messageId;
       btn.dataset.conversationId = chatId;
       btn.dataset.index = index;
@@ -144,9 +144,9 @@ const PinnedMessages = (function() {
         if (pin) {
           await PinnedMessagesService.deletePin(pin.id);
           btn.classList.remove('pinned');
-          btn.title = 'Bookmark message';
+          btn.title = ToolboxI18n.t("Bookmark message");
           btn.querySelector('.ds-icon').innerHTML = getBookmarkIcon(false);
-          showToast('Bookmark removed');
+          showToast(ToolboxI18n.t("Bookmark removed"));
         }
       } else {
         // Check pinned messages limit before adding
@@ -195,9 +195,9 @@ const PinnedMessages = (function() {
         });
         
         btn.classList.add('pinned');
-        btn.title = 'Remove bookmark';
+        btn.title = ToolboxI18n.t("Remove bookmark");
         btn.querySelector('.ds-icon').innerHTML = getBookmarkIcon(true);
-        showToast('Message bookmarked!');
+        showToast(ToolboxI18n.t("Message bookmarked!"));
       }
     } catch (error) {
       console.error('[DeepSeek Toolbox] Pin error:', error);
@@ -263,6 +263,7 @@ const PinnedMessages = (function() {
       <span>${message}</span>
     `;
     
+    ToolboxI18n.applyDirection(toast);
     document.body.appendChild(toast);
     setTimeout(() => {
       toast.style.opacity = '0';

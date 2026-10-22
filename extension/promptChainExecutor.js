@@ -19,12 +19,12 @@ class PromptChainExecutor {
 
   async runChain(chain, variableValues = {}) {
     if (PromptChainExecutor.active?.isRunning) {
-      this.showToast('A chain is already running', 'warning');
+      this.showToast(ToolboxI18n.t("A chain is already running"), 'warning');
       return;
     }
     if (!Array.isArray(chain.steps) || !chain.steps.length) return;
     if (DeepSeekDOM.stopVisible()) {
-      this.showToast('Wait for the current response before starting a chain', 'warning');
+      this.showToast(ToolboxI18n.t("Wait for the current response before starting a chain"), 'warning');
       return;
     }
     this.currentChain = { ...chain, steps: this.replaceVariables(chain.steps, variableValues) };
@@ -69,28 +69,28 @@ class PromptChainExecutor {
 
     try {
       const textarea = DeepSeekDOM.textarea();
-      if (!textarea) throw new Error('Could not find DeepSeek input field');
-      if (DeepSeekDOM.stopVisible()) throw new Error('Wait for DeepSeek to finish responding');
+      if (!textarea) throw new Error(ToolboxI18n.t("Could not find DeepSeek input field"));
+      if (DeepSeekDOM.stopVisible()) throw new Error(ToolboxI18n.t("Wait for DeepSeek to finish responding"));
       // Never replace text the user started typing while the chain was waiting.
-      if (stepIndex > 0 && textarea.value.trim()) throw new Error('Chain stopped to preserve your draft');
+      if (stepIndex > 0 && textarea.value.trim()) throw new Error(ToolboxI18n.t("Chain stopped to preserve your draft"));
       textarea.focus();
       const setter = Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value').set;
       setter.call(textarea, stepContent);
       textarea.dispatchEvent(new Event('input', { bubbles: true }));
       textarea.dispatchEvent(new Event('change', { bubbles: true }));
       this.showChainIndicator(stepIndex + 1, this.currentChain.steps.length);
-      this.updateIndicatorStatus('Preparing to send...');
+      this.updateIndicatorStatus(ToolboxI18n.t("Preparing to send..."));
 
       let sendButton;
       for (let attempt = 0; attempt < 30; attempt++) {
         await this.waitForMs(300);
         if (!this.isActive(runId, stepId)) return;
-        if (textarea.value !== stepContent) throw new Error('Chain stopped to preserve your draft');
+        if (textarea.value !== stepContent) throw new Error(ToolboxI18n.t("Chain stopped to preserve your draft"));
         sendButton = this.findSendButton();
         if (!DeepSeekDOM.disabled(sendButton)) break;
       }
-      if (!sendButton) throw new Error('Could not find send button');
-      if (DeepSeekDOM.disabled(sendButton)) throw new Error('Send button is not ready');
+      if (!sendButton) throw new Error(ToolboxI18n.t("Could not find send button"));
+      if (DeepSeekDOM.disabled(sendButton)) throw new Error(ToolboxI18n.t("Send button is not ready"));
       if (!this.isActive(runId, stepId)) return;
       this.responseBaseline = DeepSeekDOM.assistantSignature();
       sendButton.click();
@@ -98,7 +98,7 @@ class PromptChainExecutor {
     } catch (error) {
       if (!this.isActive(runId, stepId)) return;
       console.error('[ChainExecutor] Error executing step:', error);
-      this.showToast(error.message || 'Failed to execute step', 'error');
+      this.showToast(error.message || ToolboxI18n.t("Failed to execute step"), 'error');
       this.stopChain();
     }
   }
@@ -108,7 +108,7 @@ class PromptChainExecutor {
     let stable = 0;
     let previousSignature = this.responseBaseline;
     let responseStarted = false;
-    this.updateIndicatorStatus('Waiting for DeepSeek to respond...');
+    this.updateIndicatorStatus(ToolboxI18n.t("Waiting for DeepSeek to respond..."));
     this.detectionInterval = setInterval(() => {
       if (!this.isActive(runId, stepId)) return;
       elapsed += 300;
@@ -125,7 +125,7 @@ class PromptChainExecutor {
       if (stable >= 4) {
         clearInterval(this.detectionInterval);
         this.detectionInterval = null;
-        this.updateIndicatorStatus('Response complete');
+        this.updateIndicatorStatus(ToolboxI18n.t("Response complete"));
         this.nextStepTimer = setTimeout(() => {
           this.nextStepTimer = null;
           if (this.isActive(runId, stepId)) this.executeStep(this.currentStepIndex + 1);
@@ -137,7 +137,7 @@ class PromptChainExecutor {
         this.manualControlsVisible = true;
       }
       if (elapsed >= 300000) {
-        this.showToast('Chain timed out after 5 minutes', 'error');
+        this.showToast(ToolboxI18n.t("Chain timed out after 5 minutes"), 'error');
         this.stopChain();
       }
     }, 300);
@@ -178,12 +178,12 @@ class PromptChainExecutor {
 
     indicator.innerHTML = `
       <div style="margin-bottom: 8px;">
-        <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">Running Chain</div>
-        <div style="font-size: 12px; opacity: 0.7;">Step ${currentStep} / ${totalSteps}</div>
+        <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">${ToolboxI18n.html("Running Chain")}</div>
+        <div style="font-size: 12px; opacity: 0.7;">${ToolboxI18n.html("Step $1 / $2", [currentStep, totalSteps])}</div>
       </div>
       
       <div class="chain-status" style="font-size: 13px; opacity: 0.8; margin-bottom: 8px;">
-        Initializing...
+        ${ToolboxI18n.html("Initializing...")}
       </div>
       
       <div class="chain-controls" style="display: flex; gap: 8px; margin-top: 12px;">
@@ -198,7 +198,7 @@ class PromptChainExecutor {
           font-weight: 500;
           border-radius: 6px;
           cursor: pointer;
-        ">Skip to Next</button>
+        ">${ToolboxI18n.html("Skip to Next")}</button>
         <button class="chain-stop-btn" style="
           flex: 1;
           padding: 8px 12px;
@@ -209,13 +209,14 @@ class PromptChainExecutor {
           font-weight: 500;
           border-radius: 6px;
           cursor: pointer;
-        ">Stop Chain</button>
+        ">${ToolboxI18n.html("Stop Chain")}</button>
       </div>
     `;
 
     indicator.querySelector('.chain-skip-btn').onclick = () => this.skipToNext();
     indicator.querySelector('.chain-stop-btn').onclick = () => this.stopChain();
 
+    ToolboxI18n.applyDirection(indicator);
     document.body.appendChild(indicator);
     this.indicatorElement = indicator;
   }
@@ -234,7 +235,7 @@ class PromptChainExecutor {
     if (controlsElement) {
       controlsElement.style.display = 'flex';
       controlsElement.querySelector('.chain-skip-btn').style.display = 'block';
-      this.updateIndicatorStatus('Taking longer than expected...');
+      this.updateIndicatorStatus(ToolboxI18n.t("Taking longer than expected..."));
     }
   }
 
@@ -242,7 +243,7 @@ class PromptChainExecutor {
     if (!this.isRunning || !this.currentChain) return;
     
     if (this.isStopButtonVisible()) {
-      this.showToast('Wait for the response to finish before skipping', 'warning');
+      this.showToast(ToolboxI18n.t("Wait for the response to finish before skipping"), 'warning');
       return;
     }
     clearTimeout(this.nextStepTimer);
@@ -273,14 +274,14 @@ class PromptChainExecutor {
     }
     
     this.resetChain();
-    this.showToast('Chain stopped', 'info');
+    this.showToast(ToolboxI18n.t("Chain stopped"), 'info');
   }
 
   completeChain() {
     if (!this.currentChain) return;
     
     log('[ChainExecutor] Chain completed');
-    this.showToast('Chain completed successfully', 'success');
+    this.showToast(ToolboxI18n.t("Chain completed successfully"), 'success');
     this.resetChain();
   }
 
@@ -339,6 +340,7 @@ class PromptChainExecutor {
     `;
     
     toast.textContent = message;
+    ToolboxI18n.applyDirection(toast);
     document.body.appendChild(toast);
     
     setTimeout(() => toast.remove(), 3000);

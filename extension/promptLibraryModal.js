@@ -58,7 +58,9 @@ const PromptLibraryModal = (function() {
 
     modal.innerHTML = getModalHTML(colors);
 
+    ToolboxI18n.applyDirection(backdrop);
     document.body.appendChild(backdrop);
+    ToolboxI18n.applyDirection(modal);
     document.body.appendChild(modal);
     document.addEventListener('keydown', handleEscape);
 
@@ -86,18 +88,18 @@ const PromptLibraryModal = (function() {
               <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
               <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
             </svg>
-            <h2 style="margin: 0; font-size: 18px; font-weight: 600; color: ${colors.text};">Prompt Library</h2>
+            <h2 style="margin: 0; font-size: 18px; font-weight: 600; color: ${colors.text};">${ToolboxI18n.html("Prompt Library")}</h2>
           </div>
-          <div id="ds-tab-buttons" style="display: flex; gap: 4px; margin-left: 8px;">
-            <button class="ds-tab-btn" data-tab="library" style="padding: 6px 14px; background: ${colors.accent}; border: none; border-radius: 6px; color: white; font-size: 13px; font-weight: 500; cursor: pointer;">Library</button>
-            <button class="ds-tab-btn" data-tab="chaining" style="padding: 6px 14px; background: transparent; border: 1px solid ${colors.border}; border-radius: 6px; color: ${colors.text}; font-size: 13px; font-weight: 500; cursor: pointer;">Chaining</button>
+          <div id="ds-tab-buttons" style="display: flex; gap: 4px; margin-inline-start: 8px;">
+            <button class="ds-tab-btn" data-tab="library" style="padding: 6px 14px; background: ${colors.accent}; border: none; border-radius: 6px; color: white; font-size: 13px; font-weight: 500; cursor: pointer;">${ToolboxI18n.html("Library")}</button>
+            <button class="ds-tab-btn" data-tab="chaining" style="padding: 6px 14px; background: transparent; border: 1px solid ${colors.border}; border-radius: 6px; color: ${colors.text}; font-size: 13px; font-weight: 500; cursor: pointer;">${ToolboxI18n.html("Chaining")}</button>
           </div>
           <div style="position: relative; width: 240px;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="${colors.textSecondary}" stroke-width="2" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); pointer-events: none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="${colors.textSecondary}" stroke-width="2" style="position: absolute; inset-inline-start: 12px; top: 50%; transform: translateY(-50%); pointer-events: none;">
               <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
             </svg>
-            <input type="text" id="ds-prompt-search" placeholder="Search prompts..."
-              style="width: 100%; padding: 8px 12px 8px 36px; background: ${colors.bgSecondary}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; outline: none;">
+            <input type="text" id="ds-prompt-search" placeholder="${ToolboxI18n.html("Search prompts...")}"
+              style="width: 100%; padding: 8px 36px; box-sizing: border-box; background: ${colors.bgSecondary}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; outline: none;">
           </div>
         </div>
         <button id="ds-library-close" style="background: none; border: none; padding: 8px; cursor: pointer; color: ${colors.textSecondary}; border-radius: 8px; display: flex;">
@@ -106,7 +108,7 @@ const PromptLibraryModal = (function() {
       </div>
       
       <div style="display: flex; flex: 1; overflow: hidden;">
-        <div id="ds-categories-sidebar" style="width: 200px; padding: 16px; border-right: 1px solid ${colors.border}; overflow-y: auto; flex-shrink: 0;"></div>
+        <div id="ds-categories-sidebar" style="width: 200px; padding: 16px; border-inline-end: 1px solid ${colors.border}; overflow-y: auto; flex-shrink: 0;"></div>
         <div id="ds-prompts-content" style="flex: 1; padding: 16px; overflow-y: auto;"></div>
       </div>
       
@@ -180,14 +182,14 @@ const PromptLibraryModal = (function() {
           style="width: 100%; padding: 10px 12px; background: ${selectedCategory === 'my-prompts' ? colors.active : 'transparent'}; border: none; border-radius: 8px; color: ${colors.text}; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.15s;">
           <span style="display: flex; align-items: center; gap: 8px;">
             ${categories['my-prompts'].icon}
-            <span>${categories['my-prompts'].name}</span>
+            <span>${ToolboxI18n.html('My Prompts')}</span>
           </span>
           <span style="font-size: 11px; padding: 2px 8px; background: ${colors.bgSecondary}; border-radius: 10px;">${myPromptsCount}</span>
         </button>
         ${selectedCategory === 'my-prompts' ? `
           <button id="ds-add-prompt-btn" style="width: 100%; margin-top: 8px; padding: 10px; background: ${colors.accent}; border: none; border-radius: 8px; color: white; font-size: 13px; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.15s;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            Add New Prompt
+            ${ToolboxI18n.html("Add New Prompt")}
           </button>
         ` : ''}
       </div>
@@ -197,7 +199,7 @@ const PromptLibraryModal = (function() {
     html += `<div style="height: 1px; background: ${colors.border}; margin: 12px 0;"></div>`;
     
     // Category label
-    html += `<div style="font-size: 11px; font-weight: 600; color: ${colors.textSecondary}; letter-spacing: 0.5px; margin-bottom: 8px;">CATEGORIES</div>`;
+    html += `<div style="font-size: 11px; font-weight: 600; color: ${colors.textSecondary}; letter-spacing: 0.5px; margin-bottom: 8px;">${ToolboxI18n.html("CATEGORIES")}</div>`;
     
     // Other categories
     for (const [key, category] of Object.entries(categories)) {
@@ -209,7 +211,7 @@ const PromptLibraryModal = (function() {
           style="width: 100%; padding: 10px 12px; margin-bottom: 4px; background: ${selectedCategory === key ? colors.active : 'transparent'}; border: none; border-radius: 8px; color: ${colors.text}; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: all 0.15s;">
           <span style="display: flex; align-items: center; gap: 8px;">
             ${category.icon}
-            <span>${category.name}</span>
+            <span>${ToolboxI18n.html(category.name)}</span>
           </span>
           <span style="font-size: 11px; padding: 2px 8px; background: ${colors.bgSecondary}; border-radius: 10px;">${count}</span>
         </button>
@@ -283,8 +285,8 @@ const PromptLibraryModal = (function() {
               ${prompt.description ? `<p style="margin: 0; font-size: 13px; color: ${colors.textSecondary}; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escapeHtml(prompt.description)}</p>` : ''}
             </div>
             ${hasVariables ? `
-              <div style="padding: 4px 8px; background: rgba(77, 107, 254, 0.1); border: 1px solid rgba(77, 107, 254, 0.2); border-radius: 12px; font-size: 11px; font-weight: 500; color: ${colors.accent}; flex-shrink: 0; margin-left: 8px;">
-                ${prompt.variables.length} var${prompt.variables.length > 1 ? 's' : ''}
+              <div style="padding: 4px 8px; background: rgba(77, 107, 254, 0.1); border: 1px solid rgba(77, 107, 254, 0.2); border-radius: 12px; font-size: 11px; font-weight: 500; color: ${colors.accent}; flex-shrink: 0; margin-inline-start: 8px;">
+                ${ToolboxI18n.html("Variables: $1", [prompt.variables.length])}
               </div>
             ` : ''}
           </div>
@@ -297,7 +299,7 @@ const PromptLibraryModal = (function() {
           <div style="display: flex; gap: 8px; margin-top: auto;">
             <button class="ds-use-btn" data-id="${prompt.id}" style="flex: 1; padding: 8px 12px; background: ${colors.accent}; border: none; border-radius: 8px; color: white; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.15s;">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              Use
+              ${ToolboxI18n.html("Use")}
             </button>
             ${isCustom ? `
               <button class="ds-edit-btn" data-id="${prompt.id}" style="padding: 8px; background: ${colors.bg}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.textSecondary}; cursor: pointer; display: flex; transition: all 0.15s;">
@@ -347,7 +349,7 @@ const PromptLibraryModal = (function() {
     let html = `
       <button id="ds-create-chain-btn" style="width: 100%; padding: 16px; margin-bottom: 16px; background: ${colors.bgSecondary}; border: 2px dashed ${colors.border}; border-radius: 12px; color: ${colors.text}; font-size: 14px; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: all 0.15s;">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        Create New Chain
+        ${ToolboxI18n.html("Create New Chain")}
       </button>
     `;
     
@@ -358,8 +360,8 @@ const PromptLibraryModal = (function() {
             <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101"/>
             <path d="M10.172 13.828a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
           </svg>
-          <p style="font-size: 16px; margin: 0 0 8px 0; color: ${colors.text};">No chains yet</p>
-          <p style="font-size: 14px; margin: 0; opacity: 0.7;">Create your first prompt chain to automate multi-step conversations</p>
+          <p style="font-size: 16px; margin: 0 0 8px 0; color: ${colors.text};">${ToolboxI18n.html("No chains yet")}</p>
+          <p style="font-size: 14px; margin: 0; opacity: 0.7;">${ToolboxI18n.html("Create your first prompt chain to automate multi-step conversations")}</p>
         </div>
       `;
     } else {
@@ -375,12 +377,12 @@ const PromptLibraryModal = (function() {
                   ${escapeHtml(chain.title)}
                 </h3>
                 <p style="margin: 0; font-size: 13px; color: ${colors.textSecondary};">
-                  ${chain.steps.length} steps${chain.description ? ' - ' + escapeHtml(chain.description) : ''}
+                  ${ToolboxI18n.html("Steps: $1", [chain.steps.length])}${chain.description ? ' - ' + escapeHtml(chain.description) : ''}
                 </p>
               </div>
               ${hasVariables ? `
-                <div style="padding: 4px 8px; background: rgba(77, 107, 254, 0.1); border: 1px solid rgba(77, 107, 254, 0.2); border-radius: 12px; font-size: 11px; font-weight: 500; color: ${colors.accent}; flex-shrink: 0; margin-left: 8px;">
-                  ${chain.variables.length} var${chain.variables.length > 1 ? 's' : ''}
+                <div style="padding: 4px 8px; background: rgba(77, 107, 254, 0.1); border: 1px solid rgba(77, 107, 254, 0.2); border-radius: 12px; font-size: 11px; font-weight: 500; color: ${colors.accent}; flex-shrink: 0; margin-inline-start: 8px;">
+                  ${ToolboxI18n.html("Variables: $1", [chain.variables.length])}
                 </div>
               ` : ''}
             </div>
@@ -391,13 +393,13 @@ const PromptLibraryModal = (function() {
                   ${i + 1}. ${escapeHtml(step.substring(0, 30))}${step.length > 30 ? '...' : ''}
                 </div>
               `).join('')}
-              ${chain.steps.length > 3 ? `<div style="padding: 4px 8px; font-size: 11px; color: ${colors.textSecondary};">+${chain.steps.length - 3} more</div>` : ''}
+              ${chain.steps.length > 3 ? `<div style="padding: 4px 8px; font-size: 11px; color: ${colors.textSecondary};">${ToolboxI18n.html("+$1 more", [chain.steps.length - 3])}</div>` : ''}
             </div>
             
             <div style="display: flex; gap: 8px; margin-top: auto;">
               <button class="ds-run-chain-btn" data-id="${chain.id}" style="flex: 1; padding: 8px 12px; background: ${colors.accent}; border: none; border-radius: 8px; color: white; font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-                Run
+                ${ToolboxI18n.html("Run")}
               </button>
               <button class="ds-edit-chain-btn" data-id="${chain.id}" style="padding: 8px; background: ${colors.bg}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.textSecondary}; cursor: pointer; display: flex;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
@@ -473,23 +475,24 @@ const PromptLibraryModal = (function() {
     varModal.innerHTML = `
       <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.7);" onclick="this.parentElement.remove()"></div>
       <div style="position: relative; background: ${colors.bg}; border: 1px solid ${colors.border}; border-radius: 12px; padding: 24px; max-width: 450px; width: 90%; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);">
-        <h3 style="margin: 0 0 16px 0; font-size: 18px; font-weight: 600; color: ${colors.text};">Fill Chain Variables</h3>
-        <p style="margin: 0 0 20px 0; font-size: 14px; color: ${colors.textSecondary};">This chain requires the following variables:</p>
+        <h3 style="margin: 0 0 16px 0; font-size: 18px; font-weight: 600; color: ${colors.text};">${ToolboxI18n.html("Fill Chain Variables")}</h3>
+        <p style="margin: 0 0 20px 0; font-size: 14px; color: ${colors.textSecondary};">${ToolboxI18n.html("This chain requires the following variables:")}</p>
         <div id="ds-var-inputs" style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
           ${chain.variables.map(v => `
             <div>
               <label style="display: block; font-size: 13px; font-weight: 500; color: ${colors.text}; margin-bottom: 4px;">{{${escapeHtml(v)}}}</label>
-              <input type="text" class="ds-var-input" data-var="${escapeHtml(v)}" placeholder="Enter value..." style="width: 100%; padding: 10px 12px; background: ${colors.bgSecondary}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; outline: none; box-sizing: border-box;">
+              <input type="text" class="ds-var-input" data-var="${escapeHtml(v)}" placeholder="${ToolboxI18n.html("Enter value...")}" style="width: 100%; padding: 10px 12px; background: ${colors.bgSecondary}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; outline: none; box-sizing: border-box;">
             </div>
           `).join('')}
         </div>
         <div style="display: flex; gap: 12px;">
-          <button id="ds-var-cancel" style="flex: 1; padding: 10px; background: transparent; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; cursor: pointer;">Cancel</button>
-          <button id="ds-var-run" style="flex: 1; padding: 10px; background: ${colors.accent}; border: none; border-radius: 8px; color: white; font-size: 14px; font-weight: 600; cursor: pointer;">Run Chain</button>
+          <button id="ds-var-cancel" style="flex: 1; padding: 10px; background: transparent; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; cursor: pointer;">${ToolboxI18n.html("Cancel")}</button>
+          <button id="ds-var-run" style="flex: 1; padding: 10px; background: ${colors.accent}; border: none; border-radius: 8px; color: white; font-size: 14px; font-weight: 600; cursor: pointer;">${ToolboxI18n.html("Run Chain")}</button>
         </div>
       </div>
     `;
     
+    ToolboxI18n.applyDirection(varModal);
     document.body.appendChild(varModal);
     
     varModal.querySelector('#ds-var-cancel').addEventListener('click', () => varModal.remove());
@@ -509,7 +512,7 @@ const PromptLibraryModal = (function() {
       });
       
       if (hasEmpty) {
-        showToast('Please fill in all variables', 'error');
+        showToast(ToolboxI18n.t("Please fill in all variables"), 'error');
         return;
       }
       
@@ -526,20 +529,20 @@ const PromptLibraryModal = (function() {
   
   async function deleteChain(id, colors) {
     const confirmed = await DialogUtils.showConfirm({
-      title: 'Delete Chain',
-      message: 'Are you sure you want to delete this chain? This action cannot be undone.',
-      confirmText: 'Delete',
+      title: ToolboxI18n.t("Delete Chain"),
+      message: ToolboxI18n.t("Are you sure you want to delete this chain? This action cannot be undone."),
+      confirmText: ToolboxI18n.t("Delete"),
       type: 'danger'
     });
     if (!confirmed) return;
     
     try {
       await PromptChainService.deleteChain(id);
-      showToast('Chain deleted', 'success');
+      showToast(ToolboxI18n.t("Chain deleted"), 'success');
       render(colors);
     } catch (error) {
       console.error('[PromptLibraryModal] Delete chain error:', error);
-      showToast('Failed to delete chain', 'error');
+      showToast(ToolboxI18n.t("Failed to delete chain"), 'error');
     }
   }
 
@@ -561,14 +564,14 @@ const PromptLibraryModal = (function() {
     let message, subMessage;
     
     if (searchQuery) {
-      message = 'No prompts found';
-      subMessage = 'Try a different search term';
+      message = ToolboxI18n.t("No prompts found");
+      subMessage = ToolboxI18n.t("Try a different search term");
     } else if (selectedCategory === 'my-prompts') {
-      message = 'No custom prompts yet';
-      subMessage = 'Click "Add New Prompt" to create your first prompt';
+      message = ToolboxI18n.t("No custom prompts yet");
+      subMessage = ToolboxI18n.t("Click \"Add New Prompt\" to create your first prompt");
     } else {
-      message = 'No prompts in this category';
-      subMessage = 'Check back later for more prompts';
+      message = ToolboxI18n.t("No prompts in this category");
+      subMessage = ToolboxI18n.t("Check back later for more prompts");
     }
     
     return `
@@ -629,20 +632,20 @@ const PromptLibraryModal = (function() {
 
   async function deletePrompt(id, colors) {
     const confirmed = await DialogUtils.showConfirm({
-      title: 'Delete Prompt',
-      message: 'Are you sure you want to delete this prompt? This action cannot be undone.',
-      confirmText: 'Delete',
+      title: ToolboxI18n.t("Delete Prompt"),
+      message: ToolboxI18n.t("Are you sure you want to delete this prompt? This action cannot be undone."),
+      confirmText: ToolboxI18n.t("Delete"),
       type: 'danger'
     });
     if (!confirmed) return;
     
     try {
       await PromptLibraryService.deletePrompt(id);
-      showToast('Prompt deleted', 'success');
+      showToast(ToolboxI18n.t("Prompt deleted"), 'success');
       render(colors);
     } catch (error) {
       console.error('[PromptLibraryModal] Delete error:', error);
-      showToast('Failed to delete prompt', 'error');
+      showToast(ToolboxI18n.t("Failed to delete prompt"), 'error');
     }
   }
 
@@ -659,6 +662,7 @@ const PromptLibraryModal = (function() {
       : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="${colors.success}" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>`;
     
     toast.innerHTML = icon + '<span>' + escapeHtml(message) + '</span>';
+    ToolboxI18n.applyDirection(toast);
     document.body.appendChild(toast);
     
     setTimeout(() => {

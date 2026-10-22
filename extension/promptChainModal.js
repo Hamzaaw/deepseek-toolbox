@@ -57,7 +57,9 @@ const PromptChainModal = (function() {
 
     modal.innerHTML = getModalHTML(colors, isEdit, chain);
 
+    ToolboxI18n.applyDirection(backdrop);
     document.body.appendChild(backdrop);
+    ToolboxI18n.applyDirection(modal);
     document.body.appendChild(modal);
     document.addEventListener('keydown', handleEscape);
 
@@ -84,7 +86,7 @@ const PromptChainModal = (function() {
             <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101"/>
             <path d="M10.172 13.828a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
           </svg>
-          <h2 style="margin: 0; font-size: 18px; font-weight: 600; color: ${colors.text};">${isEdit ? 'Edit Chain' : 'Create Prompt Chain'}</h2>
+          <h2 style="margin: 0; font-size: 18px; font-weight: 600; color: ${colors.text};">${isEdit ? ToolboxI18n.t("Edit Chain") : ToolboxI18n.t("Create Prompt Chain")}</h2>
         </div>
         <button id="ds-chain-close" style="background: none; border: none; padding: 8px; cursor: pointer; color: ${colors.textSecondary}; border-radius: 8px; display: flex;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -94,18 +96,18 @@ const PromptChainModal = (function() {
       <div style="flex: 1; overflow-y: auto; overflow-x: hidden; padding: 24px;">
         <div style="margin-bottom: 20px;">
           <label style="display: block; font-size: 13px; font-weight: 500; color: ${colors.text}; margin-bottom: 6px;">
-            Chain Title <span style="color: ${colors.error};">*</span>
+            ${ToolboxI18n.html("Chain Title")} <span style="color: ${colors.error};">*</span>
           </label>
-          <input type="text" id="ds-chain-title" placeholder="e.g., Research Paper Writing Chain" maxlength="100"
+          <input type="text" id="ds-chain-title" placeholder="${ToolboxI18n.html("e.g., Research Paper Writing Chain")}" maxlength="100"
             value="${chain ? escapeHtml(chain.title) : ''}"
             style="width: 100%; padding: 10px 12px; background: ${colors.bgSecondary}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; outline: none; box-sizing: border-box;">
         </div>
         
         <div style="margin-bottom: 20px;">
           <label style="display: block; font-size: 13px; font-weight: 500; color: ${colors.text}; margin-bottom: 6px;">
-            Description
+            ${ToolboxI18n.html("Description")}
           </label>
-          <input type="text" id="ds-chain-description" placeholder="Brief description of what this chain does"
+          <input type="text" id="ds-chain-description" placeholder="${ToolboxI18n.html("Brief description of what this chain does")}"
             value="${chain ? escapeHtml(chain.description || '') : ''}"
             style="width: 100%; padding: 10px 12px; background: ${colors.bgSecondary}; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; outline: none; box-sizing: border-box;">
         </div>
@@ -113,32 +115,32 @@ const PromptChainModal = (function() {
         <div>
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <label style="font-size: 13px; font-weight: 500; color: ${colors.text};">
-              Chain Steps <span style="color: ${colors.error};">*</span>
-              <span style="font-weight: 400; color: ${colors.textSecondary};"> (Use {{variable}} for placeholders)</span>
+              ${ToolboxI18n.html("Chain Steps")} <span style="color: ${colors.error};">*</span>
+              <span style="font-weight: 400; color: ${colors.textSecondary};"> ${ToolboxI18n.html("(Use {{variable}} for placeholders)")}</span>
             </label>
-            <span id="ds-step-count" style="font-size: 12px; color: ${colors.textSecondary};">2 / 10 steps</span>
+            <span id="ds-step-count" style="font-size: 12px; color: ${colors.textSecondary};">${ToolboxI18n.html("2 / 10 steps")}</span>
           </div>
           
           <div id="ds-steps-container" style="display: flex; flex-direction: column; gap: 12px;"></div>
           
           <button id="ds-add-step" style="width: 100%; margin-top: 12px; padding: 10px; background: ${colors.bgSecondary}; border: 1px dashed ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 13px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; transition: all 0.15s;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            Add Step
+            ${ToolboxI18n.html("Add Step")}
           </button>
         </div>
         
         <div id="ds-chain-variables" style="display: none; margin-top: 16px; padding: 12px; background: rgba(77, 107, 254, 0.1); border: 1px solid rgba(77, 107, 254, 0.2); border-radius: 8px;">
-          <div style="font-size: 12px; font-weight: 600; color: ${colors.accent}; margin-bottom: 8px;">Detected Variables:</div>
+          <div style="font-size: 12px; font-weight: 600; color: ${colors.accent}; margin-bottom: 8px;">${ToolboxI18n.html("Detected Variables:")}</div>
           <div id="ds-chain-variables-list" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
         </div>
       </div>
       
       <div style="padding: 16px 24px; border-top: 1px solid ${colors.border}; display: flex; gap: 12px; flex-shrink: 0;">
         <button id="ds-chain-cancel" style="flex: 1; padding: 10px 20px; background: transparent; border: 1px solid ${colors.border}; border-radius: 8px; color: ${colors.text}; font-size: 14px; font-weight: 500; cursor: pointer;">
-          Cancel
+          ${ToolboxI18n.html("Cancel")}
         </button>
         <button id="ds-chain-save" style="flex: 1; padding: 10px 20px; background: ${colors.accent}; border: none; border-radius: 8px; color: white; font-size: 14px; font-weight: 600; cursor: pointer;">
-          ${isEdit ? 'Update Chain' : 'Create Chain'}
+          ${isEdit ? ToolboxI18n.t("Update Chain") : ToolboxI18n.t("Create Chain")}
         </button>
       </div>
     `;
@@ -163,7 +165,7 @@ const PromptChainModal = (function() {
       container.appendChild(stepEl);
     });
     
-    countEl.textContent = `${currentSteps.length} / 10 steps`;
+    countEl.textContent = ToolboxI18n.t("Steps: $1 / 10", [currentSteps.length]);
     
     if (currentSteps.length >= 10) {
       addBtn.style.opacity = '0.5';
@@ -191,19 +193,20 @@ const PromptChainModal = (function() {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="${colors.textSecondary}" stroke-width="2" style="cursor: grab;">
             <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
-          <span style="font-size: 13px; font-weight: 600; color: ${colors.text};">Step ${index + 1}</span>
+          <span style="font-size: 13px; font-weight: 600; color: ${colors.text};">${ToolboxI18n.html("Step $1", [index + 1])}</span>
         </div>
         <button class="ds-remove-step" data-index="${index}" style="background: none; border: none; padding: 4px; cursor: pointer; color: ${colors.textSecondary}; border-radius: 4px; display: flex; ${currentSteps.length <= 2 ? 'opacity: 0.3; cursor: not-allowed;' : ''}">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
         </button>
       </div>
-      <textarea class="ds-step-content" data-index="${index}" placeholder="Enter prompt for step ${index + 1}... (use {{variable}} for dynamic values)" rows="3"
+      <textarea class="ds-step-content" data-index="${index}" placeholder="${ToolboxI18n.html("Enter the prompt for step $1... Use {{variable}} for dynamic values.", [index + 1])}" rows="3"
         style="width: 100%; padding: 10px; background: ${colors.bg}; border: 1px solid ${colors.border}; border-radius: 6px; color: ${colors.text}; font-size: 13px; font-family: 'SF Mono', Monaco, monospace; outline: none; resize: vertical; min-height: 70px; box-sizing: border-box;">${escapeHtml(content)}</textarea>
       <div class="ds-char-count" style="font-size: 11px; color: ${colors.textSecondary}; text-align: right; margin-top: 4px;">${content.length} / 6000</div>
     `;
     
     // Event listeners
     const textarea = stepEl.querySelector('.ds-step-content');
+    ToolboxI18n.prepareInput(textarea);
     textarea.addEventListener('input', (e) => {
       currentSteps[index] = e.target.value;
       const charCount = stepEl.querySelector('.ds-char-count');
@@ -251,7 +254,7 @@ const PromptChainModal = (function() {
 
   function addStep(colors) {
     if (currentSteps.length >= 10) {
-      showToast('Maximum 10 steps allowed', 'error');
+      showToast(ToolboxI18n.t("Maximum 10 steps allowed"), 'error');
       return;
     }
     currentSteps.push('');
@@ -266,7 +269,7 @@ const PromptChainModal = (function() {
 
   function removeStep(index, colors) {
     if (currentSteps.length <= 2) {
-      showToast('Chain must have at least 2 steps', 'error');
+      showToast(ToolboxI18n.t("Chain must have at least 2 steps"), 'error');
       return;
     }
     currentSteps.splice(index, 1);
@@ -296,18 +299,18 @@ const PromptChainModal = (function() {
     const steps = currentSteps.filter(s => s.trim().length > 0);
     
     if (!title) {
-      showToast('Please enter a chain title', 'error');
+      showToast(ToolboxI18n.t("Please enter a chain title"), 'error');
       return;
     }
     
     if (steps.length < 2) {
-      showToast('Chain must have at least 2 non-empty steps', 'error');
+      showToast(ToolboxI18n.t("Chain must have at least 2 non-empty steps"), 'error');
       return;
     }
     
     const oversized = steps.findIndex(s => s.length > 6000);
     if (oversized !== -1) {
-      showToast(`Step ${oversized + 1} exceeds 6000 character limit`, 'error');
+      showToast(ToolboxI18n.t("Step $1 exceeds the 6000-character limit", [oversized + 1]), 'error');
       return;
     }
     
@@ -315,17 +318,17 @@ const PromptChainModal = (function() {
       let result;
       if (editingChain) {
         result = await PromptChainService.updateChain(editingChain.id, { title, description, steps });
-        showToast('Chain updated successfully!', 'success');
+        showToast(ToolboxI18n.t("Chain updated successfully!"), 'success');
       } else {
         result = await PromptChainService.createChain({ title, description, steps });
-        showToast('Chain created successfully!', 'success');
+        showToast(ToolboxI18n.t("Chain created successfully!"), 'success');
       }
       
       if (onSaveCallback) onSaveCallback(result);
       setTimeout(close, 500);
     } catch (error) {
       console.error('[PromptChainModal] Save error:', error);
-      showToast(error.message || 'Failed to save chain', 'error');
+      showToast(error.message || ToolboxI18n.t("Failed to save chain"), 'error');
     }
   }
 
@@ -342,6 +345,7 @@ const PromptChainModal = (function() {
       : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="${colors.success}" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>`;
     
     toast.innerHTML = icon + '<span>' + escapeHtml(message) + '</span>';
+    ToolboxI18n.applyDirection(toast);
     document.body.appendChild(toast);
     
     setTimeout(() => {

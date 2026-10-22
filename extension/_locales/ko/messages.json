@@ -48,5 +48,45 @@
         "example": "chat.deepseek.com"
       }
     }
+  },
+  "toolboxLocale": {
+    "message": "ko",
+    "description": "Language of this catalog; used for dates and direction."
+  },
+  "toolboxDirection": {
+    "message": "ltr",
+    "description": "Direction of extension UI, never the host chat."
+  },
+  "ui_Manage_Folders_d47cd85b": {
+    "message": "폴더",
+    "description": "UI: Manage Folders"
+  },
+  "ui_FOLDERS_78bae08a": {
+    "message": "폴더",
+    "description": "UI: FOLDERS"
+  },
+  "ui_Open_Folders_67fb1834": {
+    "message": "폴더",
+    "description": "UI: Open Folders"
+  },
+  "ui_Pinned_Messages_17b1d7bd": {
+    "message": "고정된 메시지",
+    "description": "UI: Pinned Messages"
+  },
+  "ui_Bookmarked_Messages_451dd7fc": {
+    "message": "고정된 메시지",
+    "description": "UI: Bookmarked Messages"
+  },
+  "ui_Prompt_Library_16590c4c": {
+    "message": "프롬프트 라이브러리",
+    "description": "UI: Prompt Library"
+  },
+  "ui_Chat_Export_c761e6a7": {
+    "message": "채팅 내보내기",
+    "description": "UI: Chat Export"
+  },
+  "ui_Export_Chat_847d0377": {
+    "message": "채팅 내보내기",
+    "description": "UI: Export Chat"
   }
 }

@@ -1,0 +1,1054 @@
+{
+  "extensionName": {
+    "message": "DeepSeek — پوشه‌ها، پرامپت‌ها و خروجی",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "گفتگوهای DeepSeek را با پوشه‌ها، نشانک‌ها، کتابخانهٔ پرامپت، زنجیره‌ها و خروجی مدیریت کنید.",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-Toolbox",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "پوشه‌ها",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "کتابخانهٔ پرامپت",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "زنجیره‌های پرامپت",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "پیام‌های نشان‌شده",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "خروجی گفتگو",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "فعال",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "به‌زودی",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "برای استفاده $LINK$ را باز کنید",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  },
+  "toolboxLocale": {
+    "message": "fa",
+    "description": "Language of this catalog; used for dates and direction."
+  },
+  "toolboxDirection": {
+    "message": "rtl",
+    "description": "Direction of extension UI, never the host chat."
+  },
+  "ui__Use_variable_name_for_placeholders__41229494": {
+    "message": "(برای جای‌نگهدارها از {variable_name} استفاده کنید)",
+    "description": "UI: (Use {variable_name} for placeholders)"
+  },
+  "ui__Use_variable_for_placeholders__ac4e6850": {
+    "message": "(برای جای‌نگهدارها از {{variable}} استفاده کنید)",
+    "description": "UI: (Use {{variable}} for placeholders)"
+  },
+  "ui_0_bookmarks_b7a35316": {
+    "message": "۰ نشانک",
+    "description": "UI: 0 bookmarks"
+  },
+  "ui_0_selected_326ec79c": {
+    "message": "۰ مورد انتخاب شده",
+    "description": "UI: 0 selected"
+  },
+  "ui_2_10_steps_967fb9ae": {
+    "message": "۲ از ۱۰ مرحله",
+    "description": "UI: 2 / 10 steps"
+  },
+  "ui_Add_New_Prompt_51bf07f4": {
+    "message": "افزودن پرامپت جدید",
+    "description": "UI: Add New Prompt"
+  },
+  "ui_Add_Step_a110f7ee": {
+    "message": "افزودن مرحله",
+    "description": "UI: Add Step"
+  },
+  "ui_Add_to_folder_e95abe5b": {
+    "message": "افزودن به پوشه",
+    "description": "UI: Add to folder"
+  },
+  "ui_Alert_5d7eca99": {
+    "message": "اعلان",
+    "description": "UI: Alert"
+  },
+  "ui_All_current_features_are_free_d0bd7980": {
+    "message": "همهٔ قابلیت‌های فعلی رایگان‌اند",
+    "description": "UI: All current features are free"
+  },
+  "ui_All_current_features_are_free_Existing_purchases_87675a63": {
+    "message": "همهٔ قابلیت‌های فعلی رایگان‌اند. خریدهای قبلی محفوظ می‌مانند.",
+    "description": "UI: All current features are free. Existing purchases remain on record."
+  },
+  "ui_Are_you_sure_you_want_to_delete_this_chain_This__a646031": {
+    "message": "آیا مطمئنید که می‌خواهید این زنجیره را حذف کنید؟ این کار برگشت‌پذیر نیست.",
+    "description": "UI: Are you sure you want to delete this chain? This action cannot be undone."
+  },
+  "ui_Are_you_sure_you_want_to_delete_this_prompt_This_ad36973c": {
+    "message": "آیا مطمئنید که می‌خواهید این پرامپت را حذف کنید؟ این کار برگشت‌پذیر نیست.",
+    "description": "UI: Are you sure you want to delete this prompt? This action cannot be undone."
+  },
+  "ui_Are_you_sure_you_want_to_remove_this_bookmark__d53202c6": {
+    "message": "آیا مطمئنید که می‌خواهید این نشانک را حذف کنید؟",
+    "description": "UI: Are you sure you want to remove this bookmark?"
+  },
+  "ui_Are_you_sure__68981be8": {
+    "message": "آیا مطمئنید؟",
+    "description": "UI: Are you sure?"
+  },
+  "ui_Bookmark_message_e7e39ee2": {
+    "message": "نشانک‌گذاری پیام",
+    "description": "UI: Bookmark message"
+  },
+  "ui_Bookmark_removed_6a0bf239": {
+    "message": "نشانک حذف شد",
+    "description": "UI: Bookmark removed"
+  },
+  "ui_Bookmarked_Messages_451dd7fc": {
+    "message": "پیام‌های نشانک‌گذاری‌شده",
+    "description": "UI: Bookmarked Messages"
+  },
+  "ui_Brief_description_of_what_this_chain_does_7b746d2": {
+    "message": "توضیح کوتاهی دربارهٔ کار این زنجیره",
+    "description": "UI: Brief description of what this chain does"
+  },
+  "ui_Brief_description_of_what_this_prompt_does_82b81e6b": {
+    "message": "توضیح کوتاهی دربارهٔ کار این پرامپت",
+    "description": "UI: Brief description of what this prompt does"
+  },
+  "ui_Bulk_Delete_92930d84": {
+    "message": "حذف گروهی",
+    "description": "UI: Bulk Delete"
+  },
+  "ui_CATEGORIES_bed194ed": {
+    "message": "دسته‌بندی‌ها",
+    "description": "UI: CATEGORIES"
+  },
+  "ui_CHATS_ffdef5a8": {
+    "message": "گفتگوها",
+    "description": "UI: CHATS"
+  },
+  "ui_Cancel_35afca3b": {
+    "message": "انصراف",
+    "description": "UI: Cancel"
+  },
+  "ui_Chain_Steps_20ffbf49": {
+    "message": "مراحل زنجیره",
+    "description": "UI: Chain Steps"
+  },
+  "ui_Chain_Title_6a8983c4": {
+    "message": "عنوان زنجیره",
+    "description": "UI: Chain Title"
+  },
+  "ui_Chain_completed_successfully_f3ac8834": {
+    "message": "زنجیره با موفقیت اجرا شد",
+    "description": "UI: Chain completed successfully"
+  },
+  "ui_Chain_created_successfully__3fe0621a": {
+    "message": "زنجیره با موفقیت ساخته شد!",
+    "description": "UI: Chain created successfully!"
+  },
+  "ui_Chain_deleted_9514dfb": {
+    "message": "زنجیره حذف شد",
+    "description": "UI: Chain deleted"
+  },
+  "ui_Chain_must_have_at_least_2_non_empty_steps_7686dcab": {
+    "message": "زنجیره باید حداقل ۲ مرحلهٔ غیرخالی داشته باشد",
+    "description": "UI: Chain must have at least 2 non-empty steps"
+  },
+  "ui_Chain_must_have_at_least_2_steps_4986128c": {
+    "message": "زنجیره باید حداقل ۲ مرحله داشته باشد",
+    "description": "UI: Chain must have at least 2 steps"
+  },
+  "ui_Chain_stopped_4869151f": {
+    "message": "زنجیره متوقف شد",
+    "description": "UI: Chain stopped"
+  },
+  "ui_Chain_stopped_to_preserve_your_draft_1fcf55c4": {
+    "message": "زنجیره برای حفظ پیش‌نویس شما متوقف شد",
+    "description": "UI: Chain stopped to preserve your draft"
+  },
+  "ui_Chain_timed_out_after_5_minutes_ac145805": {
+    "message": "مهلت اجرای زنجیره پس از ۵ دقیقه به پایان رسید",
+    "description": "UI: Chain timed out after 5 minutes"
+  },
+  "ui_Chain_updated_successfully__796502dd": {
+    "message": "زنجیره با موفقیت به‌روز شد!",
+    "description": "UI: Chain updated successfully!"
+  },
+  "ui_Chaining_b9943ada": {
+    "message": "زنجیره‌سازی",
+    "description": "UI: Chaining"
+  },
+  "ui_Chat_Export_c761e6a7": {
+    "message": "خروجی گفتگو",
+    "description": "UI: Chat Export"
+  },
+  "ui_Check_back_later_for_more_prompts_2d71cb0f": {
+    "message": "برای پرامپت‌های بیشتر بعداً مراجعه کنید",
+    "description": "UI: Check back later for more prompts"
+  },
+  "ui_Choose_a_format_to_export_54c99113": {
+    "message": "قالب خروجی را انتخاب کنید",
+    "description": "UI: Choose a format to export"
+  },
+  "ui_Clear_All_de7f94e5": {
+    "message": "پاک کردن همه",
+    "description": "UI: Clear All"
+  },
+  "ui_Clear_All_Bookmarks_d49d7820": {
+    "message": "حذف همهٔ نشانک‌ها",
+    "description": "UI: Clear All Bookmarks"
+  },
+  "ui_Click_Add_New_Prompt_to_create_your_first_prompt_a825b6c0": {
+    "message": "برای ساخت اولین پرامپت، روی «افزودن پرامپت جدید» کلیک کنید",
+    "description": "UI: Click \"Add New Prompt\" to create your first prompt"
+  },
+  "ui_Click_New_to_create_one_bc254412": {
+    "message": "برای ساخت پوشه، روی «جدید» کلیک کنید",
+    "description": "UI: Click \"New\" to create one"
+  },
+  "ui_Click_the_bookmark_icon_on_any_message_to_save_i_d11f307e": {
+    "message": "برای ذخیرهٔ هر پیام، روی نماد نشانک آن کلیک کنید",
+    "description": "UI: Click the bookmark icon on any message to save it"
+  },
+  "ui_Click_the_folder_icon_to_add_a_chat_to_a_folder_f107987e": {
+    "message": "برای افزودن گفتگو به پوشه، روی نماد پوشه کلیک کنید",
+    "description": "UI: Click the folder icon to add a chat to a folder"
+  },
+  "ui_Close_cd86acc3": {
+    "message": "بستن",
+    "description": "UI: Close"
+  },
+  "ui_Close_Modal_f1176cca": {
+    "message": "بستن پنجره",
+    "description": "UI: Close Modal"
+  },
+  "ui_Confirm_a183c9ef": {
+    "message": "تأیید",
+    "description": "UI: Confirm"
+  },
+  "ui_Content_c1679f62": {
+    "message": "محتوا",
+    "description": "UI: Content"
+  },
+  "ui_Create_Chain_a580eedc": {
+    "message": "ساخت زنجیره",
+    "description": "UI: Create Chain"
+  },
+  "ui_Create_Folder_14a179b3": {
+    "message": "ساخت پوشه",
+    "description": "UI: Create Folder"
+  },
+  "ui_Create_New_Chain_831e12f6": {
+    "message": "ساخت زنجیرهٔ جدید",
+    "description": "UI: Create New Chain"
+  },
+  "ui_Create_New_Prompt_ac744bdb": {
+    "message": "ساخت پرامپت جدید",
+    "description": "UI: Create New Prompt"
+  },
+  "ui_Create_Prompt_Chain_a9b3e65c": {
+    "message": "ساخت زنجیرهٔ پرامپت",
+    "description": "UI: Create Prompt Chain"
+  },
+  "ui_Create_a_folder_first_before_adding_chats_to_it__4f07e10d": {
+    "message": "پیش از افزودن گفتگوها، ابتدا یک پوشه بسازید.",
+    "description": "UI: Create a folder first before adding chats to it."
+  },
+  "ui_Create_your_first_prompt_chain_to_automate_multi_1cff355e": {
+    "message": "اولین زنجیرهٔ پرامپت خود را برای خودکارسازی گفتگوهای چندمرحله‌ای بسازید",
+    "description": "UI: Create your first prompt chain to automate multi-step conversations"
+  },
+  "ui_Delete_5797ea6a": {
+    "message": "حذف",
+    "description": "UI: Delete"
+  },
+  "ui_Delete_0__8d435b2d": {
+    "message": "حذف (۰)",
+    "description": "UI: Delete (0)"
+  },
+  "ui_Delete_All_1e2162d": {
+    "message": "حذف همه",
+    "description": "UI: Delete All"
+  },
+  "ui_Delete_Chain_9f99ff4b": {
+    "message": "حذف زنجیره",
+    "description": "UI: Delete Chain"
+  },
+  "ui_Delete_Folder_1d01f10e": {
+    "message": "حذف پوشه",
+    "description": "UI: Delete Folder"
+  },
+  "ui_Delete_Prompt_9587f124": {
+    "message": "حذف پرامپت",
+    "description": "UI: Delete Prompt"
+  },
+  "ui_Delete_folder_63156b2e": {
+    "message": "حذف پوشه",
+    "description": "UI: Delete folder"
+  },
+  "ui_Deleting_conversations__2d2d8075": {
+    "message": "در حال حذف گفتگوها…",
+    "description": "UI: Deleting conversations..."
+  },
+  "ui_Description_66de7a09": {
+    "message": "توضیحات",
+    "description": "UI: Description"
+  },
+  "ui_Detected_Variables__3faebba4": {
+    "message": "متغیرهای شناسایی‌شده:",
+    "description": "UI: Detected Variables:"
+  },
+  "ui_Done_8dd31791": {
+    "message": "انجام شد",
+    "description": "UI: Done"
+  },
+  "ui_Edit_Chain_62a37948": {
+    "message": "ویرایش زنجیره",
+    "description": "UI: Edit Chain"
+  },
+  "ui_Edit_Prompt_dc6b3101": {
+    "message": "ویرایش پرامپت",
+    "description": "UI: Edit Prompt"
+  },
+  "ui_Enhance_495c1849": {
+    "message": "بهبود",
+    "description": "UI: Enhance"
+  },
+  "ui_Enhance_Prompt_ced565a9": {
+    "message": "بهبود پرامپت",
+    "description": "UI: Enhance Prompt"
+  },
+  "ui_Enhanced__f7a58d42": {
+    "message": "بهبود یافت!",
+    "description": "UI: Enhanced!"
+  },
+  "ui_Enhancement_failed_6bd6151e": {
+    "message": "بهبود پرامپت ناموفق بود",
+    "description": "UI: Enhancement failed"
+  },
+  "ui_Enhancement_finished_your_changed_draft_was_pres_2d956c03": {
+    "message": "بهبود انجام شد؛ پیش‌نویس تغییریافتهٔ شما حفظ شد",
+    "description": "UI: Enhancement finished; your changed draft was preserved"
+  },
+  "ui_Enhancing__2f88a128": {
+    "message": "در حال بهبود…",
+    "description": "UI: Enhancing..."
+  },
+  "ui_Enter_your_prompt_template_Example_Write_a_blog__b975f91d": {
+    "message": "الگوی پرامپت خود را وارد کنید…\n\nمثال:\nیک پست وبلاگ دربارهٔ {topic} برای {audience} بنویس.\nلحن: {tone}",
+    "description": "UI: Enter your prompt template...\n\nExample:\nWrite a blog post about {topic} for {audience}.\nTone: {tone}"
+  },
+  "ui_Existing_premium_membership_current_features_are_ee6fb0ed": {
+    "message": "عضویت ویژهٔ قبلی — قابلیت‌های فعلی برای همه رایگان‌اند",
+    "description": "UI: Existing premium membership — current features are free for everyone"
+  },
+  "ui_Export_Chat_847d0377": {
+    "message": "خروجی گرفتن از گفتگو",
+    "description": "UI: Export Chat"
+  },
+  "ui_Exporting__96187e59": {
+    "message": "در حال تهیهٔ خروجی…",
+    "description": "UI: Exporting..."
+  },
+  "ui_FOLDERS_78bae08a": {
+    "message": "پوشه‌ها",
+    "description": "UI: FOLDERS"
+  },
+  "ui_Failed_5579c3d4": {
+    "message": "ناموفق",
+    "description": "UI: Failed"
+  },
+  "ui_Failed_to_delete_chain_e1b5416d": {
+    "message": "حذف زنجیره ناموفق بود",
+    "description": "UI: Failed to delete chain"
+  },
+  "ui_Failed_to_delete_prompt_e20b51b2": {
+    "message": "حذف پرامپت ناموفق بود",
+    "description": "UI: Failed to delete prompt"
+  },
+  "ui_Failed_to_execute_step_7aa26a74": {
+    "message": "اجرای مرحله ناموفق بود",
+    "description": "UI: Failed to execute step"
+  },
+  "ui_Failed_to_insert_text_Please_ensure_DeepSeek_is__792011fa": {
+    "message": "درج متن ناموفق بود. مطمئن شوید DeepSeek بارگذاری شده است.",
+    "description": "UI: Failed to insert text. Please ensure DeepSeek is loaded."
+  },
+  "ui_Failed_to_open_export_modal_4cb19726": {
+    "message": "باز کردن پنجرهٔ خروجی ناموفق بود",
+    "description": "UI: Failed to open export modal"
+  },
+  "ui_Failed_to_save_chain_4f6476bb": {
+    "message": "ذخیرهٔ زنجیره ناموفق بود",
+    "description": "UI: Failed to save chain"
+  },
+  "ui_Failed_to_save_prompt_1ff86df4": {
+    "message": "ذخیرهٔ پرامپت ناموفق بود",
+    "description": "UI: Failed to save prompt"
+  },
+  "ui_Features_6c4737ea": {
+    "message": "قابلیت‌ها",
+    "description": "UI: Features"
+  },
+  "ui_Fill_Chain_Variables_8c34baa4": {
+    "message": "وارد کردن متغیرهای زنجیره",
+    "description": "UI: Fill Chain Variables"
+  },
+  "ui_Free_1c5c36fb": {
+    "message": "رایگان",
+    "description": "UI: Free"
+  },
+  "ui_Help_improve_DeepSeek_Toolbox_Share_thoughts_rep_3de4eae2": {
+    "message": "به بهبود DeepSeek Toolbox کمک کنید! نظر بدهید، اشکال‌ها را گزارش کنید یا قابلیت پیشنهاد دهید.",
+    "description": "UI: Help improve DeepSeek Toolbox! Share thoughts, report bugs, or suggest features."
+  },
+  "ui_Initializing__2e0471a2": {
+    "message": "در حال آماده‌سازی…",
+    "description": "UI: Initializing..."
+  },
+  "ui_Keyboard_Shortcuts_ba51bd57": {
+    "message": "میانبرهای صفحه‌کلید",
+    "description": "UI: Keyboard Shortcuts"
+  },
+  "ui_Library_a8532270": {
+    "message": "کتابخانه",
+    "description": "UI: Library"
+  },
+  "ui_Manage_Folders_d47cd85b": {
+    "message": "مدیریت پوشه‌ها",
+    "description": "UI: Manage Folders"
+  },
+  "ui_Maximum_10_steps_allowed_119fe4b9": {
+    "message": "حداکثر ۱۰ مرحله مجاز است",
+    "description": "UI: Maximum 10 steps allowed"
+  },
+  "ui_Message_bookmarked__e414f92c": {
+    "message": "پیام نشانک‌گذاری شد!",
+    "description": "UI: Message bookmarked!"
+  },
+  "ui_New_8b242db1": {
+    "message": "جدید",
+    "description": "UI: New"
+  },
+  "ui_New_Chat_313f8d3d": {
+    "message": "گفتگوی جدید",
+    "description": "UI: New Chat"
+  },
+  "ui_No_Conversation_Open_202b4823": {
+    "message": "هیچ گفتگویی باز نیست",
+    "description": "UI: No Conversation Open"
+  },
+  "ui_No_Folders_dcfa4e77": {
+    "message": "پوشه‌ای وجود ندارد",
+    "description": "UI: No Folders"
+  },
+  "ui_No_bookmarks_match_your_search_b53247f": {
+    "message": "نشانکی مطابق جستجوی شما پیدا نشد",
+    "description": "UI: No bookmarks match your search"
+  },
+  "ui_No_bookmarks_yet_fa63047d": {
+    "message": "هنوز نشانکی ندارید",
+    "description": "UI: No bookmarks yet"
+  },
+  "ui_No_chains_yet_80ad032": {
+    "message": "هنوز زنجیره‌ای ندارید",
+    "description": "UI: No chains yet"
+  },
+  "ui_No_chats_found_7071f76d": {
+    "message": "گفتگویی پیدا نشد",
+    "description": "UI: No chats found"
+  },
+  "ui_No_chats_in_this_folder_db401150": {
+    "message": "در این پوشه گفتگویی نیست",
+    "description": "UI: No chats in this folder"
+  },
+  "ui_No_conversations_found_3c2a9852": {
+    "message": "گفتگویی پیدا نشد",
+    "description": "UI: No conversations found"
+  },
+  "ui_No_custom_prompts_yet_661172d4": {
+    "message": "هنوز پرامپت شخصی ندارید",
+    "description": "UI: No custom prompts yet"
+  },
+  "ui_No_folders_yet_e0c1ca05": {
+    "message": "هنوز پوشه‌ای ندارید",
+    "description": "UI: No folders yet"
+  },
+  "ui_No_matching_conversations_37a56d5d": {
+    "message": "گفتگوی مطابقی پیدا نشد",
+    "description": "UI: No matching conversations"
+  },
+  "ui_No_prompts_found_28288421": {
+    "message": "پرامپتی پیدا نشد",
+    "description": "UI: No prompts found"
+  },
+  "ui_No_prompts_in_this_category_27124e10": {
+    "message": "در این دسته پرامپتی نیست",
+    "description": "UI: No prompts in this category"
+  },
+  "ui_OK_85e4b82f": {
+    "message": "باشه",
+    "description": "UI: OK"
+  },
+  "ui_Open_Folders_67fb1834": {
+    "message": "باز کردن پوشه‌ها",
+    "description": "UI: Open Folders"
+  },
+  "ui_Opening_email_client__d22f49ec": {
+    "message": "در حال باز کردن برنامهٔ ایمیل…",
+    "description": "UI: Opening email client..."
+  },
+  "ui_Pin_Messages_fe59f98": {
+    "message": "نشانک‌گذاری پیام‌ها",
+    "description": "UI: Pin Messages"
+  },
+  "ui_Pinned_Messages_17b1d7bd": {
+    "message": "پیام‌های نشان‌شده",
+    "description": "UI: Pinned Messages"
+  },
+  "ui_Plain_text_file_a17e519c": {
+    "message": "فایل متن ساده",
+    "description": "UI: Plain text file"
+  },
+  "ui_Plain_text_with_formatting_ba1af379": {
+    "message": "متن ساده با قالب‌بندی",
+    "description": "UI: Plain text with formatting"
+  },
+  "ui_Please_enter_a_chain_title_37562a29": {
+    "message": "لطفاً عنوان زنجیره را وارد کنید",
+    "description": "UI: Please enter a chain title"
+  },
+  "ui_Please_enter_some_text_first_9d90110": {
+    "message": "لطفاً ابتدا متنی وارد کنید",
+    "description": "UI: Please enter some text first"
+  },
+  "ui_Please_enter_your_feedback_55ad96f": {
+    "message": "لطفاً بازخورد خود را وارد کنید",
+    "description": "UI: Please enter your feedback"
+  },
+  "ui_Please_fill_in_all_required_fields_3532bb12": {
+    "message": "لطفاً همهٔ فیلدهای ضروری را پر کنید",
+    "description": "UI: Please fill in all required fields"
+  },
+  "ui_Please_fill_in_all_variables_f9eaa389": {
+    "message": "لطفاً همهٔ متغیرها را پر کنید",
+    "description": "UI: Please fill in all variables"
+  },
+  "ui_Please_open_a_chat_conversation_first_then_click_724ce3a8": {
+    "message": "ابتدا یک گفتگو باز کنید، سپس روی «خروجی گرفتن از گفتگو» کلیک کنید.",
+    "description": "UI: Please open a chat conversation first, then click \"Export Chat\"."
+  },
+  "ui_Premium_311220de": {
+    "message": "ویژه",
+    "description": "UI: Premium"
+  },
+  "ui_Preparing_to_send__830dd428": {
+    "message": "در حال آماده‌سازی برای ارسال…",
+    "description": "UI: Preparing to send..."
+  },
+  "ui_Print_ready_document_449538d7": {
+    "message": "سند آمادهٔ چاپ",
+    "description": "UI: Print-ready document"
+  },
+  "ui_Prompt_Library_16590c4c": {
+    "message": "کتابخانهٔ پرامپت",
+    "description": "UI: Prompt Library"
+  },
+  "ui_Prompt_created_successfully__7d030b7": {
+    "message": "پرامپت با موفقیت ساخته شد!",
+    "description": "UI: Prompt created successfully!"
+  },
+  "ui_Prompt_deleted_fbae63d6": {
+    "message": "پرامپت حذف شد",
+    "description": "UI: Prompt deleted"
+  },
+  "ui_Prompt_enhanced__9a92988e": {
+    "message": "پرامپت بهبود یافت!",
+    "description": "UI: Prompt enhanced!"
+  },
+  "ui_Prompt_updated_successfully__cdf8c9f8": {
+    "message": "پرامپت با موفقیت به‌روز شد!",
+    "description": "UI: Prompt updated successfully!"
+  },
+  "ui_Remove_21a5901d": {
+    "message": "حذف",
+    "description": "UI: Remove"
+  },
+  "ui_Remove_Bookmark_1f33a40b": {
+    "message": "حذف نشانک",
+    "description": "UI: Remove Bookmark"
+  },
+  "ui_Remove_bookmark_e6d79ceb": {
+    "message": "حذف نشانک",
+    "description": "UI: Remove bookmark"
+  },
+  "ui_Remove_from_folder_d27c3961": {
+    "message": "حذف از پوشه",
+    "description": "UI: Remove from folder"
+  },
+  "ui_Rename_Folder_f61e3969": {
+    "message": "تغییر نام پوشه",
+    "description": "UI: Rename Folder"
+  },
+  "ui_Rename_folder_3c334689": {
+    "message": "تغییر نام پوشه",
+    "description": "UI: Rename folder"
+  },
+  "ui_Response_complete_e76928f1": {
+    "message": "پاسخ کامل شد",
+    "description": "UI: Response complete"
+  },
+  "ui_Run_8d57e66a": {
+    "message": "اجرا",
+    "description": "UI: Run"
+  },
+  "ui_Run_Chain_cf7a1b4b": {
+    "message": "اجرای زنجیره",
+    "description": "UI: Run Chain"
+  },
+  "ui_Running_Chain_fb033a2d": {
+    "message": "در حال اجرای زنجیره",
+    "description": "UI: Running Chain"
+  },
+  "ui_Save_Prompt_5d7115ce": {
+    "message": "ذخیرهٔ پرامپت",
+    "description": "UI: Save Prompt"
+  },
+  "ui_Search_bookmarks__bb5372": {
+    "message": "جستجوی نشانک‌ها…",
+    "description": "UI: Search bookmarks..."
+  },
+  "ui_Search_conversations__114f0b99": {
+    "message": "جستجوی گفتگوها…",
+    "description": "UI: Search conversations..."
+  },
+  "ui_Search_prompts__cc874eec": {
+    "message": "جستجوی پرامپت‌ها…",
+    "description": "UI: Search prompts..."
+  },
+  "ui_Select_All_cd7e3b12": {
+    "message": "انتخاب همه",
+    "description": "UI: Select All"
+  },
+  "ui_Send_Feedback_3b46f8a": {
+    "message": "ارسال بازخورد",
+    "description": "UI: Send Feedback"
+  },
+  "ui_Send_button_is_not_ready_faf7e1d5": {
+    "message": "دکمهٔ ارسال آماده نیست",
+    "description": "UI: Send button is not ready"
+  },
+  "ui_Settings_4b058728": {
+    "message": "تنظیمات",
+    "description": "UI: Settings"
+  },
+  "ui_Share_your_thoughts__9a5319db": {
+    "message": "نظر خود را بنویسید…",
+    "description": "UI: Share your thoughts..."
+  },
+  "ui_Show_AI_powered_prompt_enhancement_button_127b2187": {
+    "message": "نمایش دکمهٔ بهبود پرامپت با هوش مصنوعی",
+    "description": "UI: Show AI-powered prompt enhancement button"
+  },
+  "ui_Show_bookmark_icons_on_messages_to_save_them_7b45faef": {
+    "message": "نمایش نماد نشانک روی پیام‌ها برای ذخیرهٔ آن‌ها",
+    "description": "UI: Show bookmark icons on messages to save them"
+  },
+  "ui_Skip_to_Next_b610efcc": {
+    "message": "رفتن به مرحلهٔ بعد",
+    "description": "UI: Skip to Next"
+  },
+  "ui_Stop_Chain_380a1794": {
+    "message": "توقف زنجیره",
+    "description": "UI: Stop Chain"
+  },
+  "ui_Structured_data_format_d92a4575": {
+    "message": "قالب دادهٔ ساخت‌یافته",
+    "description": "UI: Structured data format"
+  },
+  "ui_Styled_web_page_a4038dd7": {
+    "message": "صفحهٔ وب قالب‌بندی‌شده",
+    "description": "UI: Styled web page"
+  },
+  "ui_Taking_longer_than_expected__9c1df667": {
+    "message": "بیش از حد انتظار طول کشیده است…",
+    "description": "UI: Taking longer than expected..."
+  },
+  "ui_Text_3e142d5e": {
+    "message": "متن",
+    "description": "UI: Text"
+  },
+  "ui_This_action_cannot_be_undone_The_selected_conver_9ba1d2ff": {
+    "message": "این کار برگشت‌پذیر نیست. گفتگوهای انتخاب‌شده برای همیشه حذف می‌شوند.",
+    "description": "UI: This action cannot be undone. The selected conversations will be permanently deleted."
+  },
+  "ui_This_chain_requires_the_following_variables__f4da2419": {
+    "message": "این زنجیره به متغیرهای زیر نیاز دارد:",
+    "description": "UI: This chain requires the following variables:"
+  },
+  "ui_This_tool_exports_the_conversation_currently_dis_51c2d93f": {
+    "message": "این ابزار از گفتگویی که اکنون در مرورگر نمایش داده می‌شود خروجی می‌گیرد.",
+    "description": "UI: This tool exports the conversation currently displayed in your browser."
+  },
+  "ui_Title_24d471a9": {
+    "message": "عنوان",
+    "description": "UI: Title"
+  },
+  "ui_Try_a_different_search_term_e858af32": {
+    "message": "عبارت دیگری را جستجو کنید",
+    "description": "UI: Try a different search term"
+  },
+  "ui_Untitled_Chat_75c48eee": {
+    "message": "گفتگوی بدون عنوان",
+    "description": "UI: Untitled Chat"
+  },
+  "ui_Update_Chain_9936e085": {
+    "message": "به‌روزرسانی زنجیره",
+    "description": "UI: Update Chain"
+  },
+  "ui_Update_Prompt_6b06240a": {
+    "message": "به‌روزرسانی پرامپت",
+    "description": "UI: Update Prompt"
+  },
+  "ui_Use_ba1c5c94": {
+    "message": "استفاده",
+    "description": "UI: Use"
+  },
+  "ui_View_all_available_shortcuts_c8e66dbf": {
+    "message": "مشاهدهٔ همهٔ میانبرها",
+    "description": "UI: View all available shortcuts"
+  },
+  "ui_Wait_for_DeepSeek_to_finish_responding_314e65ca": {
+    "message": "صبر کنید تا پاسخ DeepSeek کامل شود",
+    "description": "UI: Wait for DeepSeek to finish responding"
+  },
+  "ui_Wait_for_the_current_response_before_starting_a__e2b64043": {
+    "message": "پیش از اجرای زنجیره، صبر کنید پاسخ فعلی کامل شود",
+    "description": "UI: Wait for the current response before starting a chain"
+  },
+  "ui_Wait_for_the_response_to_finish_before_skipping_7c05de4d": {
+    "message": "پیش از رفتن به مرحلهٔ بعد، صبر کنید پاسخ کامل شود",
+    "description": "UI: Wait for the response to finish before skipping"
+  },
+  "ui_Waiting_for_DeepSeek_to_respond__7c242189": {
+    "message": "در انتظار پاسخ DeepSeek…",
+    "description": "UI: Waiting for DeepSeek to respond..."
+  },
+  "ui_e_g_Research_Paper_Writing_Chain_af7025dd": {
+    "message": "مثلاً زنجیرهٔ نوشتن مقالهٔ پژوهشی",
+    "description": "UI: e.g., Research Paper Writing Chain"
+  },
+  "ui_Enter_a_descriptive_title_b8820ab2": {
+    "message": "عنوانی گویا وارد کنید",
+    "description": "UI: Enter a descriptive title"
+  },
+  "ui_Enter_folder_name__c2969960": {
+    "message": "نام پوشه را وارد کنید…",
+    "description": "UI: Enter folder name..."
+  },
+  "ui_Enter_new_folder_name__ffdfb0ca": {
+    "message": "نام جدید پوشه را وارد کنید…",
+    "description": "UI: Enter new folder name..."
+  },
+  "ui_Enter_value_4f11af6c": {
+    "message": "وارد کردن مقدار",
+    "description": "UI: Enter value"
+  },
+  "ui_Enter_value__a2bb5542": {
+    "message": "مقدار را وارد کنید…",
+    "description": "UI: Enter value..."
+  },
+  "ui__1_enabled_bc237f7f": {
+    "message": "$VALUE1$ فعال شد",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: $1 enabled"
+  },
+  "ui__1_disabled_57909b8a": {
+    "message": "$VALUE1$ غیرفعال شد",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: $1 disabled"
+  },
+  "ui_Delete_folder_1_Chats_inside_will_not_be_deleted_50ed56a4": {
+    "message": "پوشهٔ «$VALUE1$» حذف شود؟ گفتگوهای داخل آن حذف نمی‌شوند.",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Delete folder \"$1\"? Chats inside will not be deleted."
+  },
+  "ui_Showing_chats_in_1__af8fa6e3": {
+    "message": "نمایش گفتگوهای «$VALUE1$»",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Showing chats in \"$1\""
+  },
+  "ui_Bookmarks_1_b51a87c3": {
+    "message": "نشانک‌ها: $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Bookmarks: $1"
+  },
+  "ui_Delete_all_bookmarks_1_This_cannot_be_undone__e13d68f6": {
+    "message": "همهٔ نشانک‌ها ($VALUE1$) حذف شوند؟ این کار برگشت‌پذیر نیست.",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Delete all bookmarks ($1)? This cannot be undone."
+  },
+  "ui__1_minutes_ago_e2bf9812": {
+    "message": "$VALUE1$ دقیقه پیش",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: $1 minutes ago"
+  },
+  "ui__1_hours_ago_f8ea0adc": {
+    "message": "$VALUE1$ ساعت پیش",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: $1 hours ago"
+  },
+  "ui__1_days_ago_64a9653c": {
+    "message": "$VALUE1$ روز پیش",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: $1 days ago"
+  },
+  "ui_Just_now_8440e32f": {
+    "message": "همین حالا",
+    "description": "UI: Just now"
+  },
+  "ui_Selected_1_5c8777cd": {
+    "message": "انتخاب‌شده: $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Selected: $1"
+  },
+  "ui_Delete_1__615dcbb0": {
+    "message": "حذف ($VALUE1$)",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Delete ($1)"
+  },
+  "ui_Conversations_deleted_1_Refreshing__a9626d46": {
+    "message": "گفتگوهای حذف‌شده: $VALUE1$. در حال بارگذاری مجدد…",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Conversations deleted: $1. Refreshing..."
+  },
+  "ui_Deleted_1_Failed_2_Refreshing__59ca43ef": {
+    "message": "حذف‌شده: $VALUE1$. ناموفق: $VALUE2$. در حال بارگذاری مجدد…",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      },
+      "value2": {
+        "content": "$2"
+      }
+    },
+    "description": "UI: Deleted: $1. Failed: $2. Refreshing..."
+  },
+  "ui_Delete_conversations_1__2cfccaf5": {
+    "message": "گفتگوها ($VALUE1$) حذف شوند؟",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Delete conversations ($1)?"
+  },
+  "ui_Variables_1_ccdcbe7f": {
+    "message": "متغیرها: $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Variables: $1"
+  },
+  "ui_Steps_1_bb4c250d": {
+    "message": "مراحل: $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Steps: $1"
+  },
+  "ui__1_more_8680efa6": {
+    "message": "+$VALUE1$ مورد دیگر",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: +$1 more"
+  },
+  "ui_Steps_1_10_86b2f0a1": {
+    "message": "مراحل: $VALUE1$ از ۱۰",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Steps: $1 / 10"
+  },
+  "ui_Step_1_exceeds_the_6000_character_limit_88c9faa7": {
+    "message": "مرحلهٔ $VALUE1$ از محدودیت ۶۰۰۰ نویسه فراتر رفته است",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Step $1 exceeds the 6000-character limit"
+  },
+  "ui_Step_1_fc488abe": {
+    "message": "مرحلهٔ $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Step $1"
+  },
+  "ui_Enter_the_prompt_for_step_1_Use_variable_for_dyn_7df2f7ab": {
+    "message": "پرامپت مرحلهٔ $VALUE1$ را وارد کنید… برای مقادیر متغیر از {{variable}} استفاده کنید.",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Enter the prompt for step $1... Use {{variable}} for dynamic values."
+  },
+  "ui_Step_1_2_e6dd938b": {
+    "message": "مرحلهٔ $VALUE1$ از $VALUE2$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      },
+      "value2": {
+        "content": "$2"
+      }
+    },
+    "description": "UI: Step $1 / $2"
+  },
+  "ui_Messages_1_2c330298": {
+    "message": "پیام‌ها: $VALUE1$",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Messages: $1"
+  },
+  "ui_Exported_as_1_successfully__5f6b8065": {
+    "message": "خروجی $VALUE1$ با موفقیت تهیه شد!",
+    "placeholders": {
+      "value1": {
+        "content": "$1"
+      }
+    },
+    "description": "UI: Exported as $1 successfully!"
+  },
+  "ui_Export_failed_Please_try_again__6086217d": {
+    "message": "تهیهٔ خروجی ناموفق بود. دوباره تلاش کنید.",
+    "description": "UI: Export failed. Please try again."
+  },
+  "ui_My_Prompts_91bf3c0c": {
+    "message": "پرامپت‌های من",
+    "description": "UI: My Prompts"
+  },
+  "ui_Development_a2381c8a": {
+    "message": "برنامه‌نویسی",
+    "description": "UI: Development"
+  },
+  "ui_Writing_3c4e7def": {
+    "message": "نوشتن",
+    "description": "UI: Writing"
+  },
+  "ui_Business_7dbaf6b": {
+    "message": "کسب‌وکار",
+    "description": "UI: Business"
+  },
+  "ui_Academic_7a88029a": {
+    "message": "دانشگاهی",
+    "description": "UI: Academic"
+  },
+  "ui_Send_to_DeepSeek_e7a74982": {
+    "message": "ارسال به DeepSeek",
+    "description": "UI: Send to DeepSeek"
+  },
+  "ui_A_chain_is_already_running_e7f4f630": {
+    "message": "یک زنجیره در حال اجراست",
+    "description": "UI: A chain is already running"
+  },
+  "ui_Could_not_find_DeepSeek_input_field_b7d37804": {
+    "message": "کادر ورودی DeepSeek پیدا نشد",
+    "description": "UI: Could not find DeepSeek input field"
+  },
+  "ui_Could_not_find_send_button_4b406d18": {
+    "message": "دکمهٔ ارسال پیدا نشد",
+    "description": "UI: Could not find send button"
+  },
+  "ui_Text_sent_to_DeepSeek__c82e2888": {
+    "message": "متن به DeepSeek فرستاده شد!",
+    "description": "UI: Text sent to DeepSeek!"
+  }
+}

@@ -71,7 +71,7 @@ test('export retains repeat messages and common prefixes',()=>{
 test('chain waits for a new response and cancellation invalidates delayed work',()=>{
  let interval,timer,send=0;let signature='old';
  const ctx=vm.createContext({window:{},location:{pathname:'/a/chat/s/qa'},console:quiet,log(){},setInterval:fn=>(interval=fn,1),clearInterval(){},setTimeout:fn=>(timer=fn,2),clearTimeout(){},DeepSeekDOM:{assistantSignature:()=>signature,stopVisible:()=>false,sendButton:()=>({})}});
- vm.runInContext(read('promptChainExecutor.js'),ctx);const executor=new ctx.window.PromptChainExecutor();executor.currentChain={steps:['1','2']};executor.isRunning=true;executor.startedPath=ctx.location.pathname;executor.responseBaseline='old';executor.updateIndicatorStatus=executor.showToast=()=>{};executor.executeStep=()=>send++;
+ vm.runInContext(read('i18n.js'),ctx);vm.runInContext(read('promptChainExecutor.js'),ctx);const executor=new ctx.window.PromptChainExecutor();executor.currentChain={steps:['1','2']};executor.isRunning=true;executor.startedPath=ctx.location.pathname;executor.responseBaseline='old';executor.updateIndicatorStatus=executor.showToast=()=>{};executor.executeStep=()=>send++;
  executor.startResponseDetection();for(let i=0;i<8;i++)interval();assert.equal(timer,undefined);
  signature='new response';for(let i=0;i<6;i++)interval();assert.equal(typeof timer,'function');executor.stopChain();timer();assert.equal(send,0);assert.equal(executor.currentChain,null);
 });

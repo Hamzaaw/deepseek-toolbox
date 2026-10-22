@@ -79,7 +79,9 @@ const BulkDeleteModal = (function() {
     
     modal.innerHTML = getModalHTML(colors);
     
+    ToolboxI18n.applyDirection(backdrop);
     document.body.appendChild(backdrop);
+    ToolboxI18n.applyDirection(modal);
     document.body.appendChild(modal);
     
     // Escape key handler
@@ -104,7 +106,7 @@ const BulkDeleteModal = (function() {
             <polyline points="3 6 5 6 21 6"/>
             <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
           </svg>
-          <h2 style="margin: 0; font-size: 18px; font-weight: 600; color: ${colors.text};">Bulk Delete</h2>
+          <h2 style="margin: 0; font-size: 18px; font-weight: 600; color: ${colors.text};">${ToolboxI18n.html("Bulk Delete")}</h2>
         </div>
         <button id="ds-bulk-close" style="background: none; border: none; padding: 8px; cursor: pointer; color: ${colors.textSecondary}; border-radius: 8px;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -115,7 +117,7 @@ const BulkDeleteModal = (function() {
       
       <div style="padding: 16px 24px; border-bottom: 1px solid ${colors.border};">
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-          <input type="text" id="ds-bulk-search" placeholder="Search conversations..." style="
+          <input type="text" id="ds-bulk-search" placeholder="${ToolboxI18n.html("Search conversations...")}" style="
             flex: 1; padding: 10px 14px; border: 1px solid ${colors.border};
             border-radius: 8px; background: ${colors.bgSecondary}; color: ${colors.text};
             font-size: 14px; outline: none;
@@ -124,9 +126,9 @@ const BulkDeleteModal = (function() {
         <div style="display: flex; align-items: center; justify-content: space-between;">
           <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: ${colors.text}; font-size: 14px;">
             <input type="checkbox" id="ds-bulk-select-all" style="width: 18px; height: 18px; cursor: pointer; accent-color: ${colors.accent};"/>
-            <span>Select All</span>
+            <span>${ToolboxI18n.html("Select All")}</span>
           </label>
-          <span id="ds-bulk-counter" style="font-size: 13px; color: ${colors.textSecondary};">0 selected</span>
+          <span id="ds-bulk-counter" style="font-size: 13px; color: ${colors.textSecondary};">${ToolboxI18n.html("0 selected")}</span>
         </div>
       </div>
       
@@ -134,7 +136,7 @@ const BulkDeleteModal = (function() {
       
       <div id="ds-bulk-progress" style="display: none; padding: 20px 24px; border-top: 1px solid ${colors.border};">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-          <span style="font-size: 14px; color: ${colors.text};">Deleting conversations...</span>
+          <span style="font-size: 14px; color: ${colors.text};">${ToolboxI18n.html("Deleting conversations...")}</span>
           <span id="ds-bulk-progress-text" style="font-size: 14px; color: ${colors.danger};">0 / 0</span>
         </div>
         <div style="height: 6px; background: ${colors.bgSecondary}; border-radius: 3px; overflow: hidden;">
@@ -146,12 +148,12 @@ const BulkDeleteModal = (function() {
         <button id="ds-bulk-cancel" style="
           padding: 10px 20px; border: 1px solid ${colors.border}; background: transparent;
           color: ${colors.text}; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer;
-        ">Cancel</button>
+        ">${ToolboxI18n.html("Cancel")}</button>
         <button id="ds-bulk-delete" disabled style="
           padding: 10px 20px; border: none; background: ${colors.danger};
           color: white; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;
           opacity: 0.5; transition: all 0.15s ease;
-        ">Delete (0)</button>
+        ">${ToolboxI18n.html("Delete (0)")}</button>
       </div>
     `;
   }
@@ -176,7 +178,7 @@ const BulkDeleteModal = (function() {
     const chatElements = document.querySelectorAll(DS_SELECTORS.chatItem);
     allChats = Array.from(chatElements).map(el => ({
       id: FolderService.extractChatId(el.href),
-      title: el.querySelector('.c08e6e93')?.textContent || 'Untitled Chat',
+      title: el.querySelector('.c08e6e93')?.textContent || ToolboxI18n.t("Untitled Chat"),
       href: el.href,
       element: el
     })).filter(c => c.id);
@@ -201,7 +203,7 @@ const BulkDeleteModal = (function() {
             <circle cx="11" cy="11" r="8"/>
             <path d="M21 21l-4.35-4.35"/>
           </svg>
-          <p style="margin: 0; font-size: 14px;">${searchQuery ? 'No matching conversations' : 'No conversations found'}</p>
+          <p style="margin: 0; font-size: 14px;">${searchQuery ? ToolboxI18n.t("No matching conversations") : ToolboxI18n.t("No conversations found")}</p>
         </div>
       `;
       return;
@@ -289,8 +291,8 @@ const BulkDeleteModal = (function() {
     const deleteBtn = modal.querySelector('#ds-bulk-delete');
     const selectAll = modal.querySelector('#ds-bulk-select-all');
     
-    counter.textContent = `${count} selected`;
-    deleteBtn.textContent = `Delete (${count})`;
+    counter.textContent = ToolboxI18n.t("Selected: $1", [count]);
+    deleteBtn.textContent = ToolboxI18n.t("Delete ($1)", [count]);
     deleteBtn.disabled = count === 0;
     deleteBtn.style.opacity = count === 0 ? '0.5' : '1';
     
@@ -357,9 +359,9 @@ const BulkDeleteModal = (function() {
     
     // Show result toast
     if (failed === 0) {
-      showToast(`Successfully deleted ${deleted} conversation${deleted !== 1 ? 's' : ''}. Refreshing...`, 'success');
+      showToast(ToolboxI18n.t("Conversations deleted: $1. Refreshing...", [deleted]), 'success');
     } else {
-      showToast(`Deleted ${deleted}, failed ${failed}. Refreshing...`, failed > deleted ? 'error' : 'success');
+      showToast(ToolboxI18n.t("Deleted: $1. Failed: $2. Refreshing...", [deleted, failed]), failed > deleted ? 'error' : 'success');
     }
     
     close();
@@ -393,24 +395,26 @@ const BulkDeleteModal = (function() {
             <line x1="12" y1="9" x2="12" y2="13"/>
             <line x1="12" y1="17" x2="12.01" y2="17"/>
           </svg>
-          <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: ${colors.text};">Delete ${count} Conversation${count !== 1 ? 's' : ''}?</h3>
+          <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: ${colors.text};">${ToolboxI18n.html("Delete conversations ($1)?", [count])}</h3>
         </div>
         <p style="margin: 0 0 20px; font-size: 14px; color: ${colors.textSecondary}; line-height: 1.5;">
-          This action cannot be undone. The selected conversations will be permanently deleted.
+          ${ToolboxI18n.html("This action cannot be undone. The selected conversations will be permanently deleted.")}
         </p>
         <div style="display: flex; justify-content: flex-end; gap: 12px;">
           <button id="ds-confirm-cancel" style="
             padding: 10px 20px; border: 1px solid ${colors.border}; background: transparent;
             color: ${colors.text}; border-radius: 8px; font-size: 14px; cursor: pointer;
-          ">Cancel</button>
+          ">${ToolboxI18n.html("Cancel")}</button>
           <button id="ds-confirm-delete" style="
             padding: 10px 20px; border: none; background: ${colors.danger};
             color: white; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;
-          ">Delete</button>
+          ">${ToolboxI18n.html("Delete")}</button>
         </div>
       `;
       
+      ToolboxI18n.applyDirection(confirmModal);
       confirmBackdrop.appendChild(confirmModal);
+      ToolboxI18n.applyDirection(confirmBackdrop);
       document.body.appendChild(confirmBackdrop);
       
       const cleanup = () => confirmBackdrop.remove();
@@ -523,6 +527,7 @@ const BulkDeleteModal = (function() {
       : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>';
     
     toast.innerHTML = `<span style="color: ${type === 'error' ? colors.danger : colors.accent};">${icon}</span>${message}`;
+    ToolboxI18n.applyDirection(toast);
     document.body.appendChild(toast);
     
     setTimeout(() => {

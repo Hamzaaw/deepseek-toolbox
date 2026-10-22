@@ -6,9 +6,10 @@
   "license": "GPL-3.0-only",
   "scripts": {
     "build": "node scripts/build.cjs",
-    "test": "node --test tests/unit.test.cjs",
+    "test": "node --test tests/unit.test.cjs tests/localization.test.cjs",
     "test:browser": "node tests/browser.test.cjs",
-    "verify": "node scripts/verify.cjs"
+    "verify": "node scripts/verify.cjs",
+    "test:locales": "node tests/localization-browser.test.cjs"
   },
   "engines": {
     "node": ">=20"

@@ -5,12 +5,12 @@
   let membershipPlan = 'free';
   
   const MENU_ITEMS = [
-    { id: 'folders', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>', label: 'Manage Folders', disabled: false },
-    { id: 'pinned', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z"/></svg>', label: 'Pinned Messages', disabled: false },
-    { id: 'bulk-delete', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>', label: 'Bulk Delete', disabled: false },
-    { id: 'export', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>', label: 'Chat Export', disabled: false },
-    { id: 'prompts', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>', label: 'Prompt Library', disabled: false },
-    { id: 'settings', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>', label: 'Settings', disabled: false }
+    { id: 'folders', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>', label: ToolboxI18n.t("Manage Folders"), disabled: false },
+    { id: 'pinned', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z"/></svg>', label: ToolboxI18n.t("Pinned Messages"), disabled: false },
+    { id: 'bulk-delete', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>', label: ToolboxI18n.t("Bulk Delete"), disabled: false },
+    { id: 'export', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>', label: ToolboxI18n.t("Chat Export"), disabled: false },
+    { id: 'prompts', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>', label: ToolboxI18n.t("Prompt Library"), disabled: false },
+    { id: 'settings', icon: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>', label: ToolboxI18n.t("Settings"), disabled: false }
   ];
   
   const TOOLBOX_ICON = `<svg width="16" height="16" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,14 +24,15 @@
     
     const isPremium = membershipPlan === 'premium' || membershipPlan === 'lifetime';
     const badgeClass = isPremium ? 'premium' : 'free';
-    const badgeText = isPremium ? 'Premium' : 'Free';
+    const badgeText = isPremium ? ToolboxI18n.t("Premium") : ToolboxI18n.t("Free");
     
     btn.innerHTML = `
       <div class="ds-toolbox-icon">${TOOLBOX_ICON}</div>
       <span>DS-Toolbox</span>
-      <span class="ds-membership-badge ds-membership-badge-${badgeClass}" id="ds-toolbox-membership-badge" data-plan="${membershipPlan}" title="${isPremium ? 'Existing premium membership — current features are free for everyone' : 'All current features are free'}">${badgeText}</span>
+      <span class="ds-membership-badge ds-membership-badge-${badgeClass}" id="ds-toolbox-membership-badge" data-plan="${membershipPlan}" title="${isPremium ? ToolboxI18n.t("Existing premium membership — current features are free for everyone") : ToolboxI18n.t("All current features are free")}">${badgeText}</span>
       <div class="ds-focus-ring"></div>
     `;
+    ToolboxI18n.applyDirection(btn);
     return btn;
   }
   
@@ -40,12 +41,12 @@
     if (!badge) return;
     
     const isPremium = plan === 'premium' || plan === 'lifetime';
-    const badgeText = isPremium ? 'Premium' : 'Free';
+    const badgeText = isPremium ? ToolboxI18n.t("Premium") : ToolboxI18n.t("Free");
     const badgeClass = isPremium ? 'premium' : 'free';
     
     badge.textContent = badgeText;
     badge.setAttribute('data-plan', plan);
-    badge.setAttribute('title', isPremium ? 'Existing premium membership — current features are free for everyone' : 'All current features are free');
+    badge.setAttribute('title', isPremium ? ToolboxI18n.t("Existing premium membership — current features are free for everyone") : ToolboxI18n.t("All current features are free"));
     badge.className = `ds-membership-badge ds-membership-badge-${badgeClass}`;
   }
   
@@ -76,6 +77,7 @@
     `).join('');
     
     dropdown.innerHTML = menuHTML;
+    ToolboxI18n.applyDirection(dropdown);
     return dropdown;
   }
   
@@ -174,7 +176,7 @@
           <circle cx="12" cy="12" r="3"/>
           <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
         </svg>
-        <span style="font-size: 18px; font-weight: 600; color: ${textColor};">Settings</span>
+        <span style="font-size: 18px; font-weight: 600; color: ${textColor};">${ToolboxI18n.html("Settings")}</span>
       `;
       
       const closeBtn = document.createElement('button');
@@ -217,6 +219,7 @@
       modalContent.appendChild(header);
       modalContent.appendChild(body);
       settingsModal.appendChild(modalContent);
+      ToolboxI18n.applyDirection(settingsModal);
       document.body.appendChild(settingsModal);
       
       // Close on overlay click
@@ -255,13 +258,13 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ds-toolbox-accent)" stroke-width="2">
         <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
       </svg>
-      Features
+      ${ToolboxI18n.html("Features")}
     `;
     section.appendChild(title);
     
     const accessNote = document.createElement('p');
     accessNote.id = 'ds-free-features-note';
-    accessNote.textContent = 'All current features are free. Existing purchases remain on record.';
+    accessNote.textContent = ToolboxI18n.t("All current features are free. Existing purchases remain on record.");
     accessNote.style.cssText = 'font-size: 13px; line-height: 1.5; margin: 0 0 16px; color: var(--ds-toolbox-text);';
     section.appendChild(accessNote);
 
@@ -271,8 +274,8 @@
     
     // Pin Messages Toggle
     const pinToggle = createToggleItem(
-      'Pin Messages',
-      'Show bookmark icons on messages to save them',
+      ToolboxI18n.t("Pin Messages"),
+      ToolboxI18n.t("Show bookmark icons on messages to save them"),
       'pinMessagesEnabled',
       settings.pinMessagesEnabled !== false,
       isDark
@@ -281,8 +284,8 @@
     
     // Enhance Prompt Toggle
     const enhanceToggle = createToggleItem(
-      'Enhance Prompt',
-      'Show AI-powered prompt enhancement button',
+      ToolboxI18n.t("Enhance Prompt"),
+      ToolboxI18n.t("Show AI-powered prompt enhancement button"),
       'enhancePromptEnabled',
       settings.enhancePromptEnabled !== false,
       isDark
@@ -363,7 +366,7 @@
         }
       }
       
-      showSettingsToast(isChecked ? `${label} enabled` : `${label} disabled`);
+      showSettingsToast(isChecked ? ToolboxI18n.t("$1 enabled", [label]) : ToolboxI18n.t("$1 disabled", [label]));
     });
     
     toggleContainer.appendChild(checkbox);
@@ -399,8 +402,8 @@
           <path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"/>
         </svg>
         <div>
-          <div style="font-size: 14px; font-weight: 600; color: var(--ds-toolbox-text); margin-bottom: 2px;">Keyboard Shortcuts</div>
-          <div style="font-size: 12px; color: var(--ds-toolbox-text-secondary);">View all available shortcuts</div>
+          <div style="font-size: 14px; font-weight: 600; color: var(--ds-toolbox-text); margin-bottom: 2px;">${ToolboxI18n.html("Keyboard Shortcuts")}</div>
+          <div style="font-size: 12px; color: var(--ds-toolbox-text-secondary);">${ToolboxI18n.html("View all available shortcuts")}</div>
         </div>
       </div>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--ds-toolbox-text-secondary)" stroke-width="2">
@@ -410,6 +413,7 @@
     
     btn.onclick = () => showKeyboardShortcutsModal(isDark);
     
+    ToolboxI18n.applyDirection(btn);
     return btn;
   }
   
@@ -421,12 +425,12 @@
     const modKey = isMac ? '⌘' : 'Ctrl';
     
     const shortcuts = [
-      { keys: `${modKey} + Shift + F`, action: 'Open Folders' },
-      { keys: `${modKey} + Shift + P`, action: 'Prompt Library' },
-      { keys: `${modKey} + Shift + X`, action: 'Export Chat' },
-      { keys: `${modKey} + Shift + M`, action: 'Pinned Messages' },
-      { keys: `${modKey} + Shift + E`, action: 'Enhance Prompt' },
-      { keys: 'Escape', action: 'Close Modal' }
+      { keys: `${modKey} + Shift + F`, action: ToolboxI18n.t("Open Folders") },
+      { keys: `${modKey} + Shift + P`, action: ToolboxI18n.t("Prompt Library") },
+      { keys: `${modKey} + Shift + X`, action: ToolboxI18n.t("Export Chat") },
+      { keys: `${modKey} + Shift + M`, action: ToolboxI18n.t("Pinned Messages") },
+      { keys: `${modKey} + Shift + E`, action: ToolboxI18n.t("Enhance Prompt") },
+      { keys: 'Escape', action: ToolboxI18n.t("Close Modal") }
     ];
     
     const overlay = document.createElement('div');
@@ -477,7 +481,7 @@
           <rect x="2" y="4" width="20" height="16" rx="2" ry="2"/>
           <path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M8 12h.01M12 12h.01M16 12h.01M7 16h10"/>
         </svg>
-        <span style="font-size: 16px; font-weight: 600; color: var(--ds-toolbox-text);">Keyboard Shortcuts</span>
+        <span style="font-size: 16px; font-weight: 600; color: var(--ds-toolbox-text);">${ToolboxI18n.html("Keyboard Shortcuts")}</span>
       </div>
     `;
     
@@ -529,6 +533,7 @@
     modal.appendChild(body);
     overlay.appendChild(backdrop);
     overlay.appendChild(modal);
+    ToolboxI18n.applyDirection(overlay);
     document.body.appendChild(overlay);
     
     const handleEscape = (e) => {
@@ -563,21 +568,21 @@
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ds-toolbox-accent)" stroke-width="2">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
       </svg>
-      Send Feedback
+      ${ToolboxI18n.html("Send Feedback")}
     `;
     
     const desc = document.createElement('p');
-    desc.textContent = 'Help improve DeepSeek Toolbox! Share thoughts, report bugs, or suggest features.';
+    desc.textContent = ToolboxI18n.t("Help improve DeepSeek Toolbox! Share thoughts, report bugs, or suggest features.");
     desc.style.cssText = `
       margin: 0 0 12px;
       font-size: 12px;
       color: var(--ds-toolbox-text-secondary);
       line-height: 1.5;
-      padding-left: 28px;
+      padding-inline-start: 28px;
     `;
     
     const textarea = document.createElement('textarea');
-    textarea.placeholder = 'Share your thoughts...';
+    textarea.placeholder = ToolboxI18n.t("Share your thoughts...");
     textarea.maxLength = 1000;
     textarea.style.cssText = `
       width: 100%;
@@ -629,7 +634,7 @@
         <line x1="22" y1="2" x2="11" y2="13"/>
         <polygon points="22 2 15 22 11 13 2 9 22 2"/>
       </svg>
-      Send Feedback
+      ${ToolboxI18n.html("Send Feedback")}
     `;
     sendBtn.onmouseover = () => { sendBtn.style.background = 'rgba(77, 107, 254, 0.25)'; };
     sendBtn.onmouseout = () => { sendBtn.style.background = 'rgba(77, 107, 254, 0.15)'; };
@@ -637,7 +642,7 @@
     sendBtn.onclick = () => {
       const feedback = textarea.value.trim();
       if (!feedback) {
-        showSettingsToast('Please enter your feedback', 'error');
+        showSettingsToast(ToolboxI18n.t("Please enter your feedback"), 'error');
         return;
       }
       
@@ -645,7 +650,7 @@
       const body = encodeURIComponent(`${feedback}\n\n---\nVersion: ${DS_CONFIG.version}\nBrowser: ${navigator.userAgent}\nTimestamp: ${new Date().toISOString()}`);
       window.open(`mailto:hamzaw31@gmail.com?subject=${subject}&body=${body}`, '_blank');
       
-      showSettingsToast('Opening email client...');
+      showSettingsToast(ToolboxI18n.t("Opening email client..."));
       setTimeout(() => {
         textarea.value = '';
         const el = document.getElementById('ds-feedback-count');
@@ -675,6 +680,7 @@
       }
       <span>${message}</span>
     `;
+    ToolboxI18n.applyDirection(toast);
     document.body.appendChild(toast);
     
     setTimeout(() => {
@@ -841,7 +847,7 @@
     }
     
     console.error('[DeepSeek Toolbox] Failed to find input element after retries');
-    showToast('Failed to insert text. Please ensure DeepSeek is loaded.', 'error');
+    showToast(ToolboxI18n.t("Failed to insert text. Please ensure DeepSeek is loaded."), 'error');
   }
   
   // Find DeepSeek input element
@@ -905,7 +911,7 @@
     }
     
     log('Text inserted successfully');
-    showToast('Text sent to DeepSeek!', 'success');
+    showToast(ToolboxI18n.t("Text sent to DeepSeek!"), 'success');
   }
   
   // Toast notification for text insertion
@@ -940,6 +946,7 @@
       : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';
     
     toast.innerHTML = `${icon}<span>${message}</span>`;
+    ToolboxI18n.applyDirection(toast);
     document.body.appendChild(toast);
     
     requestAnimationFrame(() => {

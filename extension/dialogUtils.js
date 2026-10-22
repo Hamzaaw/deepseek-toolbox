@@ -74,10 +74,12 @@ const DialogUtils = (function() {
       max-width: ${width}; width: 90%; box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
       transform: scale(0.95); opacity: 0; transition: all 0.15s ease;
     `;
+    ToolboxI18n.applyDirection(dialog);
     return dialog;
   }
   
   function animateIn(backdrop, dialog) {
+    ToolboxI18n.applyDirection(backdrop);
     document.body.appendChild(backdrop);
     requestAnimationFrame(() => {
       backdrop.style.opacity = '1';
@@ -116,10 +118,10 @@ const DialogUtils = (function() {
    */
   function showConfirm(options = {}) {
     const {
-      title = 'Confirm',
-      message = 'Are you sure?',
-      confirmText = 'Confirm',
-      cancelText = 'Cancel',
+      title = ToolboxI18n.t("Confirm"),
+      message = ToolboxI18n.t("Are you sure?"),
+      confirmText = ToolboxI18n.t("Confirm"),
+      cancelText = ToolboxI18n.t("Cancel"),
       type = 'info'
     } = options;
     
@@ -200,12 +202,12 @@ const DialogUtils = (function() {
    */
   function showPrompt(options = {}) {
     const {
-      title = 'Enter value',
+      title = ToolboxI18n.t("Enter value"),
       message = '',
       placeholder = '',
       defaultValue = '',
-      confirmText = 'OK',
-      cancelText = 'Cancel'
+      confirmText = ToolboxI18n.t("OK"),
+      cancelText = ToolboxI18n.t("Cancel")
     } = options;
     
     return new Promise(resolve => {
@@ -295,9 +297,9 @@ const DialogUtils = (function() {
    */
   function showAlert(options = {}) {
     const {
-      title = 'Alert',
+      title = ToolboxI18n.t("Alert"),
       message = '',
-      buttonText = 'OK',
+      buttonText = ToolboxI18n.t("OK"),
       type = 'info'
     } = options;
     
