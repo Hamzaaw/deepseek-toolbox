@@ -1,0 +1,52 @@
+{
+  "extensionName": {
+    "message": "DeepSeek फोल्डर, प्रॉम्प्ट लाइब्रेरी और एक्सपोर्ट",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "DeepSeek को फोल्डर, चैट एक्सपोर्ट, प्रॉम्प्ट लाइब्रेरी और AI प्रॉम्प्ट एन्हांसमेंट के साथ सुपरचार्ज करें।",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-टूलबॉक्स",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "फोल्डर",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "प्रॉम्प्ट लाइब्रेरी",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "प्रॉम्प्ट चेन",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "पिन किए गए संदेश",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "चैट एक्सपोर्ट",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "सक्रिय",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "जल्द आ रहा है",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "उपयोग करने के लिए $LINK$ खोलें",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  }
+}

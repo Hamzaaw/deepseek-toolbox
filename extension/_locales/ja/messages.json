@@ -1,0 +1,52 @@
+{
+  "extensionName": {
+    "message": "DeepSeek フォルダ、プロンプトライブラリ & エクスポート",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "フォルダ、チャットエクスポート、プロンプトライブラリ、AIプロンプト強化でDeepSeekをパワーアップ。",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-ツールボックス",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "フォルダ",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "プロンプトライブラリ",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "プロンプトチェーン",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "ピン留めメッセージ",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "チャットエクスポート",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "有効",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "近日公開",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "$LINK$ を開いて使用",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  }
+}

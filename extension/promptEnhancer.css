@@ -1,0 +1,59 @@
+/* DeepSeek Toolbox - Prompt Enhancer Styles */
+
+/* Spinning animation for enhance icon */
+.ds-enhance-spinning {
+  animation: ds-enhance-spin 1s linear infinite;
+}
+
+@keyframes ds-enhance-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Enhance button hover effect */
+#ds-enhance-btn:hover:not([aria-disabled="true"]) {
+  background: var(--ds-toolbox-bg-hover);
+}
+
+#ds-enhance-btn[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Toast notification */
+.ds-enhance-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ds-toolbox-bg);
+  border: 1px solid var(--ds-toolbox-border);
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: var(--ds-toolbox-text);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 100002;
+  box-shadow: var(--ds-toolbox-shadow);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: ds-toast-slide-up 0.2s ease-out;
+  transition: opacity 0.2s ease;
+}
+
+.ds-enhance-toast.success {
+  border-color: var(--ds-toolbox-accent);
+}
+
+.ds-enhance-toast.success svg {
+  color: var(--ds-toolbox-accent);
+}
+
+.ds-enhance-toast.error {
+  border-color: #ef4444;
+}
+
+.ds-enhance-toast.error svg {
+  color: #ef4444;
+}

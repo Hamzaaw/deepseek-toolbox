@@ -1,0 +1,52 @@
+{
+  "extensionName": {
+    "message": "DeepSeek Folders, Prompt Library & Export",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Supercharge DeepSeek with folders, chat export, prompt library, and AI prompt enhancement.",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-Toolbox",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "Folders",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "Prompt Library",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "Prompt Chains",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "Pinned Messages",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "Chat Export",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "Active",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "Soon",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "Open $LINK$ to use",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  }
+}

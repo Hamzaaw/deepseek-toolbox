@@ -1,0 +1,52 @@
+{
+  "extensionName": {
+    "message": "DeepSeek 폴더, 프롬프트 라이브러리 & 내보내기",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "폴더, 채팅 내보내기, 프롬프트 라이브러리, AI 프롬프트 향상으로 DeepSeek를 강화하세요.",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-툴박스",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "폴더",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "프롬프트 라이브러리",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "프롬프트 체인",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "고정된 메시지",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "채팅 내보내기",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "활성",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "곧 출시",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "$LINK$ 열어서 사용",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  }
+}

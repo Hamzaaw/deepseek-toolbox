@@ -1,0 +1,52 @@
+{
+  "extensionName": {
+    "message": "DeepSeek Папки, Библиотека промптов и Экспорт",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Улучшите DeepSeek с помощью папок, экспорта чата, библиотеки промптов и AI-улучшения промптов.",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-Инструменты",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "Папки",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "Библиотека промптов",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "Цепочки промптов",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "Закреплённые сообщения",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "Экспорт чата",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "Активно",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "Скоро",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "Откройте $LINK$ для использования",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  }
+}

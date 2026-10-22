@@ -1,0 +1,392 @@
+/* DeepSeek Toolbox - Premium Paywall Modal Styles */
+
+.ds-toolbox-paywall-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200000;
+  display: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.ds-toolbox-paywall-modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-paywall-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  animation: ds-paywall-backdropFadeIn 0.2s ease;
+}
+
+.ds-paywall-modal-container {
+  position: relative;
+  background: var(--ds-toolbox-bg);
+  border: 1px solid var(--ds-toolbox-border);
+  border-radius: 16px;
+  max-width: 640px;
+  width: 90%;
+  max-height: 85vh;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(0.95);
+  opacity: 0;
+  animation: ds-paywall-modalSlideIn 0.2s ease forwards;
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-paywall-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--ds-toolbox-border);
+  flex-shrink: 0;
+}
+
+.ds-paywall-modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ds-toolbox-text);
+  margin: 0;
+}
+
+.ds-paywall-close-btn {
+  background: none;
+  border: none;
+  color: var(--ds-toolbox-text);
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 9999px;
+  transition: all 150ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.ds-paywall-close-btn:hover {
+  background: var(--ds-toolbox-bg-hover);
+  opacity: 1;
+}
+
+.ds-paywall-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+
+.ds-paywall-feature-banner {
+  background: var(--ds-toolbox-bg-hover);
+  border: 1px solid var(--ds-toolbox-border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.ds-paywall-feature-description {
+  color: var(--ds-toolbox-text);
+  opacity: 0.9;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ds-paywall-feature-description strong {
+  color: var(--ds-toolbox-text);
+  opacity: 1;
+  font-weight: 600;
+}
+
+.ds-paywall-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ds-paywall-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid var(--ds-toolbox-border);
+  border-radius: 8px;
+  transition: all 150ms;
+}
+
+.ds-paywall-feature-item:hover {
+  background: var(--ds-toolbox-bg-hover);
+}
+
+.ds-paywall-feature-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--ds-toolbox-text);
+  opacity: 0.7;
+}
+
+.ds-paywall-feature-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ds-paywall-feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.ds-paywall-feature-text strong {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ds-toolbox-text);
+  line-height: 1.3;
+}
+
+.ds-paywall-feature-limit {
+  font-size: 11px;
+  color: var(--ds-toolbox-text-secondary);
+  line-height: 1.3;
+}
+
+.ds-paywall-plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.ds-paywall-plan {
+  position: relative;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--ds-toolbox-border);
+  background: transparent;
+  transition: all 150ms;
+  cursor: pointer;
+}
+
+.ds-paywall-plan:hover {
+  background: var(--ds-toolbox-bg-hover);
+  transform: translateY(-2px);
+}
+
+.ds-paywall-plan-annual {
+  background: var(--ds-toolbox-bg-hover);
+  border-color: var(--ds-toolbox-accent);
+  border-width: 2px;
+}
+
+.ds-paywall-plan-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 4px;
+}
+
+.ds-paywall-badge-save {
+  padding: 3px 8px;
+  border-radius: 9999px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  background: var(--ds-toolbox-accent);
+  color: white;
+}
+
+.ds-paywall-plan-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--ds-toolbox-text);
+  margin-bottom: 4px;
+  line-height: 1;
+  margin-top: 1.75rem;
+  white-space: nowrap;
+}
+
+.ds-paywall-plan-billing {
+  font-size: 11px;
+  color: var(--ds-toolbox-text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.ds-paywall-plan-button {
+  width: 100%;
+  padding: 8px 16px;
+  background: var(--ds-toolbox-bg);
+  color: var(--ds-toolbox-text);
+  border: 1px solid var(--ds-toolbox-border);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms;
+}
+
+.ds-paywall-plan-button:hover:not(:disabled) {
+  background: var(--ds-toolbox-bg-hover);
+}
+
+.ds-paywall-plan-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.ds-paywall-plan-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ds-paywall-plan-button-annual {
+  background: var(--ds-toolbox-accent);
+  color: white;
+  border-color: var(--ds-toolbox-accent);
+  font-weight: 600;
+}
+
+.ds-paywall-plan-button-annual:hover:not(:disabled) {
+  background: var(--ds-toolbox-accent);
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(78, 131, 238, 0.3);
+}
+
+.ds-paywall-guarantee {
+  text-align: center;
+  font-size: 11px;
+  color: var(--ds-toolbox-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.ds-paywall-continue-free {
+  width: 100%;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--ds-toolbox-border);
+  border-radius: 8px;
+  color: var(--ds-toolbox-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms;
+}
+
+.ds-paywall-continue-free:hover {
+  background: var(--ds-toolbox-bg-hover);
+  color: var(--ds-toolbox-text);
+}
+
+/* Toast Notifications */
+.ds-paywall-toast {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  z-index: 200001;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.3s ease;
+}
+
+.ds-paywall-toast.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ds-paywall-toast-success {
+  background-color: #16a34a;
+  color: white;
+}
+
+.ds-paywall-toast-error {
+  background-color: #dc2626;
+  color: white;
+}
+
+.ds-paywall-toast-info {
+  background-color: var(--ds-toolbox-accent);
+  color: white;
+}
+
+/* Animations */
+@keyframes ds-paywall-backdropFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes ds-paywall-modalSlideIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Scrollbar */
+.ds-paywall-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ds-paywall-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ds-paywall-modal-body::-webkit-scrollbar-thumb {
+  background: var(--ds-toolbox-border);
+  border-radius: 3px;
+}
+
+.ds-paywall-modal-body::-webkit-scrollbar-thumb:hover {
+  background: var(--ds-toolbox-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .ds-paywall-modal-container {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .ds-paywall-modal-header,
+  .ds-paywall-modal-body {
+    padding: 16px;
+  }
+  
+  .ds-paywall-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ds-paywall-plans {
+    grid-template-columns: 1fr;
+  }
+  
+  .ds-paywall-plan-price {
+    font-size: 1.25rem;
+  }
+}

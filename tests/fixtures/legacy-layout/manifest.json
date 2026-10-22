@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Synthetic Toolbox upgrade fixture",
+  "version": "1.0.1",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://chat.deepseek.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

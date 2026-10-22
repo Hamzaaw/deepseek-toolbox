@@ -1,0 +1,52 @@
+{
+  "extensionName": {
+    "message": "DeepSeek Pastas, Biblioteca de Prompts e Exportação",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Potencialize o DeepSeek com pastas, exportação de chat, biblioteca de prompts e aprimoramento de prompts com IA.",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-Toolbox",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "Pastas",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "Biblioteca de Prompts",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "Cadeias de Prompts",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "Mensagens Fixadas",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "Exportar Chat",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "Ativo",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "Em breve",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "Abra $LINK$ para usar",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  }
+}

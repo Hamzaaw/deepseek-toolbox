@@ -1,0 +1,52 @@
+{
+  "extensionName": {
+    "message": "DeepSeek المجلدات ومكتبة الأوامر والتصدير",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "عزز DeepSeek بالمجلدات وتصدير المحادثات ومكتبة الأوامر وتحسين الأوامر بالذكاء الاصطناعي.",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-صندوق الأدوات",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "المجلدات",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "مكتبة الأوامر",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "سلاسل الأوامر",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "الرسائل المثبتة",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "تصدير المحادثة",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "نشط",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "قريباً",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "افتح $LINK$ للاستخدام",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  }
+}

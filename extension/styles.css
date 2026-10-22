@@ -1,0 +1,428 @@
+/* DeepSeek Toolbox Styles */
+
+/* CSS Variables for theming */
+:root {
+  --ds-toolbox-bg: #ffffff;
+  --ds-toolbox-bg-hover: #f0f0f0;
+  --ds-toolbox-text: #1a1a1a;
+  --ds-toolbox-text-secondary: #666666;
+  --ds-toolbox-border: #e0e0e0;
+  --ds-toolbox-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  --ds-toolbox-accent: #4d6bfe;
+}
+
+body.dark {
+  --ds-toolbox-bg: #1e1e1e;
+  --ds-toolbox-bg-hover: #2a2a2a;
+  --ds-toolbox-text: #e4e4e4;
+  --ds-toolbox-text-secondary: #888888;
+  --ds-toolbox-border: #333333;
+  --ds-toolbox-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --ds-toolbox-accent: #6b8cff;
+}
+
+/* Toolbox Button */
+.ds-toolbox-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  margin: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  position: relative;
+  color: var(--ds-toolbox-text);
+  font-size: 13px;
+  user-select: none;
+  flex-wrap: nowrap;
+}
+
+.ds-toolbox-btn > span:not(.ds-membership-badge) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
+}
+
+.ds-toolbox-btn:hover {
+  background-color: var(--ds-toolbox-bg-hover);
+}
+
+.ds-toolbox-btn.ds-toolbox-active {
+  background-color: var(--ds-toolbox-bg-hover);
+}
+
+.ds-toolbox-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: var(--ds-toolbox-accent);
+}
+
+.ds-toolbox-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ds-toolbox-btn .ds-focus-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.ds-toolbox-btn:focus-visible .ds-focus-ring {
+  box-shadow: 0 0 0 2px var(--ds-toolbox-accent);
+}
+
+/* Dropdown Menu */
+.ds-toolbox-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  margin-top: 6px;
+  padding: 6px;
+  background: var(--ds-toolbox-bg);
+  border: none;
+  border-radius: 12px;
+  box-shadow: var(--ds-toolbox-shadow);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 10000;
+}
+
+.ds-toolbox-btn.ds-toolbox-active .ds-toolbox-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown Header */
+.ds-toolbox-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 12px 8px 12px;
+}
+
+.ds-toolbox-header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ds-toolbox-accent);
+}
+
+.ds-toolbox-header-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.ds-toolbox-header-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ds-toolbox-text);
+}
+
+/* Menu Items */
+.ds-toolbox-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+  color: var(--ds-toolbox-text);
+  font-weight: 500;
+}
+
+.ds-toolbox-menu-item:hover:not(.disabled) {
+  background-color: var(--ds-toolbox-bg-hover);
+}
+
+.ds-toolbox-menu-item.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ds-toolbox-menu-item .menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.ds-toolbox-menu-item .menu-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ds-toolbox-menu-item .menu-label {
+  flex: 1;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.ds-toolbox-menu-item .menu-badge {
+  font-size: 9px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  background: var(--ds-toolbox-accent);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Divider */
+.ds-toolbox-divider {
+  height: 1px;
+  background: var(--ds-toolbox-border);
+  margin: 4px 0;
+}
+
+/* Pin Button on Messages */
+.ds-pin-btn.pinned .ds-icon {
+  color: var(--ds-toolbox-accent);
+}
+
+/* Toast Notification */
+.ds-pin-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ds-toolbox-bg);
+  border: 1px solid var(--ds-toolbox-border);
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: var(--ds-toolbox-text);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 100001;
+  box-shadow: var(--ds-toolbox-shadow);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: ds-toast-slide-up 0.2s ease-out;
+  transition: opacity 0.2s ease;
+}
+
+.ds-pin-toast.success {
+  border-color: var(--ds-toolbox-accent);
+}
+
+.ds-pin-toast.success svg {
+  color: var(--ds-toolbox-accent);
+}
+
+.ds-pin-toast.error {
+  border-color: #ef4444;
+}
+
+.ds-pin-toast.error svg {
+  color: #ef4444;
+}
+
+.ds-pin-toast svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+@keyframes ds-toast-slide-up {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Bulk Delete Modal Styles */
+.ds-bulk-toast {
+  animation: ds-toast-slide-up 0.2s ease-out;
+}
+
+.ds-bulk-chat-item:hover .ds-bulk-checkbox {
+  opacity: 1;
+}
+
+/* Custom checkbox styling */
+.ds-bulk-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--ds-toolbox-border);
+  border-radius: 4px;
+  background: var(--ds-toolbox-bg);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s ease;
+}
+
+.ds-bulk-checkbox:checked {
+  background: var(--ds-toolbox-accent);
+  border-color: var(--ds-toolbox-accent);
+}
+
+.ds-bulk-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.ds-bulk-checkbox:hover {
+  border-color: var(--ds-toolbox-accent);
+}
+
+#ds-bulk-search:focus {
+  border-color: var(--ds-toolbox-accent);
+  box-shadow: 0 0 0 3px rgba(77, 107, 254, 0.15);
+}
+
+/* Export Modal Styles */
+.ds-export-toast {
+  animation: ds-toast-slide-up 0.2s ease-out;
+}
+
+.ds-export-format-btn {
+  font-family: inherit;
+}
+
+.ds-export-format-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(77, 107, 254, 0.3);
+}
+
+/* Settings Toggle Switch */
+.ds-settings-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--ds-toolbox-border);
+  transition: 0.3s;
+  border-radius: 26px;
+}
+
+.ds-settings-slider.checked {
+  background-color: rgba(77, 107, 254, 0.3);
+}
+
+.ds-settings-slider-circle {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--ds-toolbox-text-secondary);
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.ds-settings-slider-circle.checked {
+  transform: translateX(22px);
+  background-color: var(--ds-toolbox-accent);
+}
+
+/* Settings Toast */
+.ds-settings-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ds-toolbox-bg);
+  border: 1px solid var(--ds-toolbox-border);
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: var(--ds-toolbox-text);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 100002;
+  box-shadow: var(--ds-toolbox-shadow);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: ds-toast-slide-up 0.2s ease-out;
+  transition: opacity 0.2s ease;
+}
+
+.ds-settings-toast.success {
+  border-color: var(--ds-toolbox-accent);
+}
+
+.ds-settings-toast.success svg {
+  color: var(--ds-toolbox-accent);
+}
+
+.ds-settings-toast.error {
+  border-color: #ef4444;
+}
+
+.ds-settings-toast.error svg {
+  color: #ef4444;
+}
+
+/* Settings Animations */
+@keyframes ds-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes ds-scale-in {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Membership Badge Styles */
+.ds-membership-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 9px;
+    font-weight: 600;
+    padding: 1px 4px;
+    border-radius: 3px;
+    line-height: 1.2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    transition: all 150ms ease-out;
+    white-space: nowrap;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* FREE Badge - Subtle gray */
+.ds-membership-badge-free {
+    background-color: var(--ds-toolbox-bg-hover);
+    color: var(--ds-toolbox-text);
+    opacity: 0.7;
+    border: 1px solid var(--ds-toolbox-border);
+}
+
+/* PREMIUM Badge - Slightly brighter */
+.ds-membership-badge-premium {
+    background-color: var(--ds-toolbox-accent);
+    color: #ffffff;
+    opacity: 0.85;
+    border: 1px solid var(--ds-toolbox-accent);
+}

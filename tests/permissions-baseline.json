@@ -1,0 +1,12 @@
+{
+  "permissions": [
+    "storage",
+    "activeTab",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://chat.deepseek.com/*"
+  ],
+  "optional_permissions": [],
+  "optional_host_permissions": []
+}

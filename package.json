@@ -1,0 +1,20 @@
+{
+  "name": "deepseek-toolbox",
+  "version": "1.0.2",
+  "private": true,
+  "description": "Folders, bookmarks, prompt chains and exports for DeepSeek.",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "test": "node --test tests/unit.test.cjs",
+    "test:browser": "node tests/browser.test.cjs",
+    "verify": "node scripts/verify.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "fflate": "0.8.3",
+    "playwright": "1.64.1"
+  }
+}

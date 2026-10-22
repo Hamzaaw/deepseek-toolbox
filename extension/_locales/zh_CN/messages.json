@@ -1,0 +1,52 @@
+{
+  "extensionName": {
+    "message": "DeepSeek 文件夹、提示词库与导出",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "为 DeepSeek 增强功能：文件夹管理、聊天导出、提示词库和 AI 提示词优化。",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-工具箱",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "文件夹",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "提示词库",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "提示词链",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "置顶消息",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "聊天导出",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "已启用",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "即将推出",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "打开 $LINK$ 使用",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  }
+}

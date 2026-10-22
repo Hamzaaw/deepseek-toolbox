@@ -1,0 +1,52 @@
+{
+  "extensionName": {
+    "message": "DeepSeek Folder, Pustaka Prompt & Ekspor",
+    "description": "The name of the extension"
+  },
+  "extensionDescription": {
+    "message": "Tingkatkan DeepSeek dengan folder, ekspor chat, pustaka prompt, dan peningkatan prompt AI.",
+    "description": "The description of the extension"
+  },
+  "popupTitle": {
+    "message": "DS-Toolbox",
+    "description": "Popup header title"
+  },
+  "featureFolders": {
+    "message": "Folder",
+    "description": "Folders feature name"
+  },
+  "featurePromptLibrary": {
+    "message": "Pustaka Prompt",
+    "description": "Prompt Library feature name"
+  },
+  "featurePromptChains": {
+    "message": "Rantai Prompt",
+    "description": "Prompt Chains feature name"
+  },
+  "featurePinnedMessages": {
+    "message": "Pesan Disematkan",
+    "description": "Pinned Messages feature name"
+  },
+  "featureChatExport": {
+    "message": "Ekspor Chat",
+    "description": "Chat Export feature name"
+  },
+  "statusActive": {
+    "message": "Aktif",
+    "description": "Status label for active features"
+  },
+  "statusSoon": {
+    "message": "Segera",
+    "description": "Status label for upcoming features"
+  },
+  "footerText": {
+    "message": "Buka $LINK$ untuk menggunakan",
+    "description": "Footer instruction text",
+    "placeholders": {
+      "link": {
+        "content": "$1",
+        "example": "chat.deepseek.com"
+      }
+    }
+  }
+}
